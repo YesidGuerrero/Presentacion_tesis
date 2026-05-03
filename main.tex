@@ -1,0 +1,704 @@
+% !TeX spellcheck = es_ES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plantilla presentación Beamer no oficial - Universidad Nacional de Colombia
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%------------------
+% LICENCE
+%------------------
+% Copyright (c) 2023 by Fabio Calderón
+%
+% This work is licensed under the Creative Commons Attribution 4.0 International License. (CC BY-NC-SA 4.0)
+%
+% To view a copy of this license, visit ``http://creativecommons.org/licenses/by-nc-sa/4.0/'' or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+%------------------
+% IMPORTANT: Read the instructions (in comment format) in each file of this template.
+%
+% This template has been developed following the identity guidelines of the Universidad Nacional de Colombia (https://identidad.unal.edu.co/).
+%------------------
+% REQUIREMENTS
+%------------------
+% The beginning of the document with "\documentclass[aspectratio=169,usenames,dvipsnames]{beamer}" is mandatory since the template has been developed for the 16:9 aspect ratio and requires the "xcolor" and "tikz" packages.
+%------------------
+% CREDITS
+%------------------
+% This template is an adaptation of the public file "University of Udine Unofficial Beamer Theme" by Marco Basaldella (Creative Commons CC BY 4.0). Available at: https://www.overleaf.com/latex/templates/university-of-udine-unofficial-beamer-theme/zndkgxrjsdzt.
+%
+% Elements have also been taken from the "Leiden University Beamer Theme" by J.P. van Leenen (LaTeX Project Public License 1.3c). Available at: https://www.overleaf.com/latex/templates/leiden-university-beamer-theme/ryfcpypnvzhr.
+%
+% Image credits:
+% - Cover: "Skyscrapers in Bogota's downtown" by Mayor's Office of Bogota. https://commons.wikimedia.org/wiki/File:Bogota_Skyline.jpg. CC BY-SA 4.0.
+% - framepic background: "Biblioteca Ernesto Guhl, Ciudad Universitaria, Universidad Nacional de Colombia" by Rubashkyn. https://commons.wikimedia.org/wiki/File:Biblioteca_Ernesto_Guhl,_Universidad_Nacional,_Bogot%C3%A1.JPG. GFDL.
+% - UNAL Logos: identidad.unal.edu.co.
+%------------------
+% ABOUT THE AUTHOR
+%------------------
+% Developed by Fabio Calderón in his fourth and final year of the Doctorate in Mathematical Sciences at the National University of Colombia.
+% Suggestions/Comments: facalderonm@unal.edu.co
+%------------------
+% TODO
+%------------------
+% - Fix warnings of overfull at frames with title.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%------------------
+% DOCUMENT TYPE
+%------------------
+\documentclass[aspectratio=169,10pt,usenames,dvipsnames,spanish]{beamer}
+%\documentclass[aspectratio=169,usenames,dvipsnames,spanish]{beamer}
+% Replace "spanish" for "english" or any other language.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%------------------
+% DOCUMENT THEME
+%------------------
+\usetheme{UNAL}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%------------------
+% PACKAGES
+%------------------
+\usepackage{graphics,graphicx} % To insert graphs. They must be in the same folder than the .TEX file.
+\usepackage{amsthm, amssymb, amsfonts, latexsym, mathtools,thmtools,bbm} % Enviroments and several math symbols.
+\usepackage{ragged2e} % Justifies text.
+\usepackage{tikzsymbols} % Emojis.
+\usepackage{comment} % To comment huge portions of text.
+\usepackage{multicol} % For multiple columns of text or listings.
+\usepackage{verbatim} % For code-style text.
+% Add any additional packages that are needed here.
+\usepackage{mathrsfs}
+
+
+\usepackage{fontspec}   %yesid
+\setmainfont{Ancizar Sans}   %yesid
+\setsansfont{Ancizar Sans}   %yesid
+
+
+
+\usepackage[backend=biber,style=authoryear]{biblatex}   %yesid
+\addbibresource{References.bib}   %yesid
+
+
+\newcommand{\ve}[1]{\mathbf{#1}}    %Creado por Yesid
+\newcommand{\vg}[1]{\boldsymbol{#1}}   %Creado por Yesid
+\newcommand{\ite}{\hat{\imath}} %Creado por Yesid
+\newcommand{\jte}{\hat{\jmath}} %Creado por Yesid
+\newcommand{\kte}{\hat{k}} %Creado por Yesid
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%------------------
+% INFO
+%------------------
+\title[Plantilla Beamer]{Movimiento de una partícula con espín en relatividad general: analogías y diferencias con el electromagnetismo}
+%\subtitle{Para la Universidad Nacional de Colombia}
+\author[Autor]{Yesid Fernando Guerrero Guio}
+\institute{Departamento de física}
+\date{\today}
+\rotulo{Director}
+\director{Juan Manuel Tejeiro Sarmiento}
+\institutedos{Observatorio astronómico nacional}
+% IMPORTANT: If any of the parameters are too long for the cover or require multiple lines (e.g., extensive title), their arrangement can be modified in the "beamerinnerthemeUNAL.sty" file.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\justifying % This command justifies all text OUTSIDE of boxes/environments. To also justify text inside boxes/environments, you should use this same command within the box/environment, just right before the text.
+%------------------
+% COVER
+%------------------
+\begin{frame}
+    \titlepage 
+    % The background image, its opacity, and position can be modified in the file "beamerinnerthemeUNAL.sty".
+\end{frame}
+%------------------
+% TAABLE OF CONTENTS
+%------------------
+\begin{frame}{Contenidos}
+    \tableofcontents
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% INTRODUCCION %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introducción}
+
+\begin{frame}
+\frametitle{Movimiento en espacio-tiempo curvo}
+
+\begin{columns}
+
+% -------- COLUMNA TEXTO --------
+\begin{column}{0.55\textwidth}
+\textbf{Geodésicas}
+La trayectoria de una partícula sin estructura interna:
+\begin{equation}
+\ddot{x}^\mu+\Gamma^\mu_{\nu\rho}\dot{x}^\nu\dot{x}^\rho=0
+\end{equation}
+
+\vspace{0.3cm}
+
+\textbf{Partículas con espín}
+
+En la aproximación polo-dipolo ( Ecuaciones de Mathisson–Papapetrou–Dixon), el movimiento difiere de las geodésicas:
+
+\begin{equation}
+\frac{Dp^\mu}{d\tau}=- \frac{1}{2} R^\mu{}_{\nu\kappa\lambda}u^\nu S^{\kappa\lambda}
+\end{equation}
+
+\begin{equation}
+\frac{DS^{\mu\nu}}{d\tau}= p^\mu u^\nu- u^\mu p^\nu
+\end{equation}
+
+\end{column}
+
+% -------- COLUMNA IMAGEN --------
+\begin{column}{0.4\textwidth}
+\centering
+\includegraphics[width=\linewidth]{graphics/trayectorias}
+
+\vspace{0.2cm}
+
+{\scriptsize Trayectorias de partículas con y sin espín en las métricas de Schwarzschild y Kerr.\\
+Cond. in: $r_0=10$, $\theta_0=\pi/2$, $\phi_0=0$, $v_0=0$, $a=s=0.9$.}
+\end{column}
+
+\end{columns}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% INTRODUCCION 2 %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Cuadrimomento de una partícula con espín}
+
+A partir de la contracción con $u_\nu$ y usando $u^\mu u_\mu=-c^2$, se obtiene:
+
+\begin{equation}
+    p^\mu = m u^\mu - \frac{u_\nu}{c^2} \frac{D S^{\mu\nu}}{d\tau}
+\end{equation}
+
+\vspace{0.4cm}
+es posible definir una masa $\mu$ y una velocidad dinámica $v^\mu$ tal que cumpla $p^\mu=\mu v^\mu$, donde $v^\mu v_\mu=-c^2$ y por lo tanto \cite{Gerakopoulos2014,Knickmann2015,Ehlers1979}.
+\vspace{0.4cm}
+\begin{columns}
+
+\column{0.5\textwidth}
+\textbf{Masa cinemática}
+\begin{equation*}
+    m = -\frac{p^\nu u_\nu}{c^2}
+\end{equation*}
+
+
+\column{0.5\textwidth}
+\textbf{Masa dinámica}
+\begin{equation*}
+    \mu^2 = -\frac{p^\mu p_\mu}{c^2}
+\end{equation*}
+\end{columns}
+
+
+Con el fín de cerrar el sistema es necesario definir unas condiciones suplementarias de espín (SSC) que además también establecen una línea de mundo en la partícula y permiten encontrar una relación entre $u^\mu$ y $p^\mu$.
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% INTRODUCCION 3 %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{frame}
+\frametitle{Comparación de condiciones suplementarias de espín}
+
+\begin{columns}[t]
+
+%------------------ Columna 1 ------------------
+\begin{column}{0.59\textwidth}
+\textbf{Tulczyjew (TSSC)}
+
+\vspace{0.3cm}
+
+\begin{equation}
+S^{\mu\nu}p_\nu = 0
+\end{equation}
+
+\vspace{0.3cm}
+
+\begin{equation}
+u^\mu = N \left(v^\mu + \frac{1}{2c^2\mu^2\Delta_s}
+R_{\nu\sigma\kappa\lambda}S^{\mu\nu}S^{\kappa\lambda}v^\sigma \right)
+\end{equation}
+
+\vspace{0.3cm}
+
+\begin{equation}
+\Delta_s = 1 + \frac{1}{4\mu^2 c^2}
+R_{\sigma\delta\kappa\lambda}S^{\sigma\delta}S^{\kappa\lambda}
+\end{equation}
+
+\vspace{0.3cm}
+
+\begin{equation}
+N = \frac{c}{\left[c^2 - \frac{1}{4\mu^4 \Delta_s^2 c^4}
+R_{\nu\sigma\kappa\lambda}R^{\alpha\beta\gamma\delta}
+S^{\mu\nu}S^{\kappa\lambda}S_{\mu\alpha}S_{\gamma\delta}
+v^\sigma v_\beta \right]^{1/2}}
+\end{equation}
+
+\end{column}
+
+%------------------ Columna 2 ------------------
+\begin{column}{0.45\textwidth}
+\textbf{Mathisson-Pirani (MP SSC)}
+
+\vspace{0.3cm}
+
+\begin{equation}
+S^{\mu\nu}u_\nu = 0
+\end{equation}
+
+\vspace{0.3cm}
+
+\begin{equation}
+u^\mu = v^\mu
+\end{equation}
+
+\vspace{0.3cm}
+
+\begin{equation}
+u^\mu = \frac{1}{m}\left(p^\mu + 
+\frac{S^{\mu\nu}S_{\nu\beta}p^\beta}{S^2}\right)
+\end{equation}
+
+\end{column}
+
+\end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% INTRODUCCION 3 %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Aproximación espín débil}
+En el régimen en el que los términos cuadráticos en el espín puedan despreciarse, las ecuaciones de la SSC se reducen a:
+
+\begin{equation}\label{aproximaciones}
+	\Delta_s \approx 1 \hspace{0.5cm} N \approx 1 \hspace{0.5cm} u^\mu \approx p^\mu
+\end{equation}
+
+por lo tanto, la masa cinemática es aproximadamente igual a la masa dinámica $\mu \approx m$, y
+\begin{equation}\label{Condiciones TSSC y PSSC}
+	S^{\mu\nu}p_\nu=S^{\mu\nu}\mu v_\nu=0   \Longrightarrow   S^{\mu\nu} u_\nu \approx 0
+\end{equation}
+es decir, en el límite de espín débil, las condiciones de Tulczyjew y Pirani son aproximadamente las mismas. La ecuación (\ref{Momentoespin}) se reduce a $p^\mu \approx mu^\mu$, y reemplazando en (\ref{EcuMomento}) se obtiene la fuerza espín-curvatura de Mathisson-Papapetrou:
+
+\begin{equation}\label{FuerzaMPD}
+	f^\mu=m \frac{D u^\mu}{d \tau}=- \frac{1}{2} R^\mu{}_{\nu\kappa\lambda}u^\nu S^{\kappa\lambda}
+\end{equation}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%% FUNDAMENTOS %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Fundamentos}
+\begin{frame}
+\frametitle{Métrica de Kerr}
+En 1963, Roy Kerr propuso la solución en el vacío a las ecuaciones de campo de Einstein (\ref{EcCampoEinstein}), de una fuente en rotación con simetría axial \cite{Kerr1963}. La métrica de Kerr depende de dos cantidades físicas: la masa $M$ y la rotación descrita por el parámetro $a$. La solución es estacionaria y axialmente simétrica, esto se evidencia en el elemento de línea que no depende de $t$ y $\phi$:
+\begin{multline} \label{Metrica_Kerr}
+ds^2=-c^2\left(1-\frac{2G_NMr}{c^2\rho^2}\right)dt^2+\frac{\rho^2}{\Delta}\, dr^2+\rho^2 \,d\theta^2\\+\left(r^2+a^2+\frac{2G_NMa^2r \sin^2 \theta}{c^2 \rho^2}\right)\sin^2 \theta \,d\phi^2-\frac{4G_NMar}{c^2\rho^2}\sin^2\theta\, c\,dt\, d\phi
+\end{multline}
+donde
+\begin{align} \label{eq1}
+\rho^2 &= r^2+a^2 \cos^2\theta \\ 
+\Delta&=r^2-\frac{2G_NMr}{c^2}+a^2
+\end{align}
+
+
+con $a=J/(Mc)$, siendo $a$ el momento angular por unidad de masa del objeto masivo.
+\end{frame}
+
+
+
+
+
+\section{Gravitoelectromagnetismo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% GEM basado en la teoría linealizada %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Basado en la teoría linealizada}
+\begin{frame}
+\frametitle{GEM basado en la teoría linealizada}
+%\begin{frame}{\color{black}\textbf{Gravitomagnetismo basado en la linealización de las ecuaciones de Einstein}}
+En la aproximación de campo débil $g_{\mu \nu}=\eta_{\mu \nu}+h_{\mu \nu}$, donde $|h_{\mu \nu}|\ll1$ \parencite{Bambi2018}. Asumiendo $g_{\mu \nu, t}=0$ y despreciando los términos $O(h^2)$, entonces los símbolos de Christoffel son:
+\begin{equation}\label{SimbolosChristoffel}
+    \Gamma^\kappa_{\nu \sigma}=\frac{1}{2}\eta^{\kappa\lambda}(h_{\lambda\sigma,\nu}+h_{\nu\lambda,\sigma}-h_{\nu\sigma,\lambda})
+\end{equation}
+
+ \begin{equation}\label{TensorRicci_Esca_Linealizadas}
+        R_{\mu\nu}=\frac{1}{2}\eta^{\lambda\sigma}(h_{\sigma\nu,\mu\lambda}-h_{\mu\nu,\sigma\lambda}-h_{\sigma\lambda,\mu\nu}+h_{\mu\lambda,\sigma\nu}), \hspace{1cm} R=h^{\mu\lambda},_{\mu\lambda}-h_{\mu}{}^\mu,_\lambda{}^{\lambda}
+    \end{equation}
+    
+Reemplazando \ref{TensorRicci_Esca_Linealizadas} en las ecuaciones de campo, y aplicando $\bar{h}_{\mu\nu}=h_{\mu\nu}-1/2\,n_{\mu\nu}\,h$ obtenemos :
+    \begin{equation}\label{EqEinsteinLinealizadash}
+        -\bar{h}_{\mu\nu,\lambda}{ }^{\lambda}-\eta_{\mu\nu}\bar{h}_{\sigma\lambda}{}^{,\sigma\lambda}+\bar{h}_{\mu\lambda,\nu}{}^{\lambda}+\bar{h}_{\nu\lambda,\mu}{}^{\lambda}=\frac{16\pi}{c^4}G T_{\mu\nu} \hspace{0.4cm} \Rightarrow \hspace{0.4cm}         -\bar{h}_{\mu\nu,\lambda}{}^{\lambda}=\frac{16 \pi G T_{\mu\nu}}{c^4}
+    \end{equation}
+    
+  imponiendo el Gauge de Lorentz $\bar{h}^{\mu\alpha}{}_{,\alpha}=0$ (La transformación infinitesimal $h_{{\mu'}{\nu'}}^{nuevo}=h_{\mu\nu}^{ant}-\xi_{\mu,\nu}-\xi_{\nu,\mu}$ dejan invariante el tensor de Riemann) \parencite{Misner1973}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%Solución a las ecuaciones linealizadas%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Solución a las ecuaciones linealizadas}
+    En $\gamma\approx1$, $u^\mu\approx(c,\ve{u})$, y $T^{\mu\nu}\equiv\rho u^\mu u^\nu$, entonces $T^{tt}\equiv\rho c^2$, $T^{ij}\equiv\rho u^i u^j$ y $T^{ti}\equiv cj^i$. Definimos los potenciales $\Phi$ y $A^i$ \parencite{SJ2020, Mashhoon1999}:
+\begin{equation}\label{potencialesGEM}
+    \Phi(\mathbf{r})\equiv -G\int \frac{\rho(\mathbf{r'})}{|\mathbf{r}-\mathbf{r'}|}d^3r' \hspace{2cm} A^i(\mathbf{r})\equiv -\frac{2G}{c^2}\int \frac{j^i(\mathbf{r'})}{|\mathbf{r}-\mathbf{r'}|}d^3r'
+\end{equation}
+
+La métrica se puede escribir como:
+\begin{equation}\label{ElementoLinea}
+    ds^2=-c^2\left(1+\frac{2\Phi}{c^2}\right)dt^2+\left(1-\frac{2\Phi}{c^2}\right)\delta_{ij}dx^idx^j+4\mathbf{A}\cdot d\mathbf{x}dt
+\end{equation}
+
+La métrica de Kerr para un cuerpo de rotación baja y campo débil, es decir, $a \ll1$ y $2GM/(c^2r) \ll 1$:
+\begin{multline}
+ds^2=-c^2\left(1-\frac{2GM}{c^2r}\right)dt^2
++\left(1+\frac{2GM}{c^2r}\right)\, dr^2 \\ 
++r^2 \,d\theta^2+r^2\sin^2 \theta \,d\phi^2
++\text{\fcolorbox{red}{white}{$-\frac{4GJ}{c^2r}\sin^2\theta$}}\, dt\, d\phi
+\end{multline}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% Ecuaciones de campo linealizadas %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Ecuaciones de campo linealizadas}
+De manera similar al electromagnetismo podemos definir los campos gravitoelectromagnéticos como:
+\begin{equation}\label{CamposGEM}
+    \mathbf{E}\equiv-\nabla \Phi-\frac{\partial}{\partial t}\left(\frac{1}{2}\mathbf{A}\right) \hspace{2cm} \mathbf{B}\equiv\nabla \times\mathbf{A}
+\end{equation}
+
+Las ecuaciones de campo de Maxwell para el gravitomagnetismo:
+
+
+\begin{equation}\label{GaussGE_GM}
+    \mathbf{\nabla}\cdot \mathbf{E}=-4\pi G \rho \hspace{1cm} \hspace{1cm} \nabla \cdot\left(\frac{1}{2} \mathbf{B}\right)=0
+\end{equation}
+
+\begin{equation}\label{LeyFaraday GEM1}
+    \nabla \times \mathbf{E}=-\frac{\partial}{\partial t} \left(\frac{1}{2}\mathbf{B}\right) \hspace{1cm}     \nabla\times\left(\frac{1}{2}\mathbf{B}\right)=\frac{1}{c^2}\frac{\partial \mathbf{E}}{\partial t}-\frac{4\pi G}{c^2} \mathbf{j}
+\end{equation}
+
+La fuerza de Lorentz del gravitoelectromagnetismo a partir de la componente espacial de la ecuación geodésica:
+
+\begin{equation}\label{LorenztGEM1}
+    \mathbf{F}=m(\mathbf{E}+2\mathbf{v}\times\mathbf{B})
+\end{equation}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% GEM fuerzas inerciales %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Basado en fuerzas inerciales}
+\begin{frame}
+\frametitle{GEM basado en fuerzas inerciales}
+
+Un marco de referencia propio de un observador acelerado es definido en \parencite{Misner1973} de la siguiente manera: Sea $\tau$ el tiempo propio medido por un observador acelerado que se mueve en una linea de mundo $\mathcal{P}=\mathcal{P}(\tau)$, donde la base tetradica ortonormal es definido como
+\begin{equation}\label{Aecu: etetrada}
+	\hat{e}_{0}(\tau)=u_{N}(\tau) \hspace{1cm} \hat{e}_{\alpha}\cdot \hat{e}_{\beta}=\hat{\eta}_{\alpha\beta}
+\end{equation}
+
+con $u_{N}(\tau)=u(\tau)/c$ es la cuadrivelocidad normalizada del observador \parencite{Hobson2015}, cuya evolución a lo largo de la linea de mundo esta dado por
+
+\begin{equation}\label{Aecu:evolucion tetrada}
+	\nabla_{\hat{u}}\hat{e}_{\beta}=\hat{\Omega}^{\alpha}{}_{\beta}\hat{e}_{\alpha}; \hspace{0.5cm} \Omega^{\alpha\beta}=\frac{2}{c^2}u^{[\alpha}a^{\beta]}+\frac{1}{c}\tilde{\epsilon}^{\;\alpha\beta}{}_{\nu\mu}\Omega^\mu u^\nu
+\end{equation}
+
+donde $\Omega^{\mu\nu}$ es el generador de transformación infinitesimal de Lorentz \parencite{Misner1973}. El término $(2/c^2)u^{[\alpha}a^{\beta]}$ es el transporte Fermi-Walker, y $\vg{\Omega}$ es la velocidad angular de rotación de la triada espacial $\hat{e}_{i}$ relativo a la triada transportada Fermi-Walker. Las componentes espaciales del generador estan dadas por $\hat{\Omega}_{ij}=\hat{\epsilon}_{ikj}\hat{\Omega}^{k}$,  \parencite{Costa2014}. Si $\Omega^{\mu}=0$ se recupera el tranporte Fermi-Walker, si además $a^{\mu}=0$ se recupera el transporte paralelo.
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Congruencia de observadores acelerados %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Congruencia de observadores y componentes de la conexión}
+\begin{columns}[t] % 't' para alinear arriba ambas columnas
+    %-----------------------------------
+    % Columna izquierda: texto
+    %-----------------------------------
+    \begin{column}{0.58\textwidth}
+        El espacio-tiempo es cubierto por un conjunto de curvas temporales 
+        $\mathcal{P}_{\mathsf{x}} (\tau)$, donde $\mathsf{x}$ es el número de la curva, $\tau$ el tiempo propio del observador; y el vector tangente  
+        es $u^\mu=\partial x^\mu/\partial \tau$, y el \textit{vector de desviación} es $\mathcal{X}^\mu=\partial x^\mu/\partial \mathsf{x}$.             La proyección espacial de la derivada covariante de $u^{\alpha}$:
+        \begin{equation}
+            K^{\alpha\beta}\equiv (h^u)^{\alpha}{}_{\lambda}(h^u)^{\beta}{}_{\tau}\nabla^{\tau}u^{\lambda}
+            =\nabla^{\beta}u^{\alpha}+\frac{1}{c^2}u^{\beta}a^{\alpha} 
+        \end{equation}
+        El cual se puede descomponer en su traza $\theta$ (expansión), 
+        su parte simétrica libre de traza $\sigma_{\alpha\beta}$ (cizalladura), 
+        y la parte antisimétrica $\omega_{\alpha\beta}$ (vorticidad):
+        \begin{align}\label{Aecu:descoK}
+            K_{\alpha\beta}=K_{(\alpha\beta)}+K_{[\alpha\beta]}=
+            \sigma_{\alpha\beta}+\frac{1}{3}\theta h_{\alpha\beta}+\omega_{\alpha\beta}
+        \end{align}
+    \end{column}
+
+    %-----------------------------------
+    % Columna derecha: imagen + ecuaciones
+    %-----------------------------------
+    \begin{column}{0.38\textwidth}
+        \begin{figure}[t]
+            \centering
+            % reducimos el tamaño un poco
+            \includegraphics[width=0.85\linewidth]{graphics/CongruenciaObservadores.png}
+            \caption{\scriptsize Congruencia de observadores. Imagen generada a partir de \parencite{Carroll2004}.}
+            \label{fig:CongruenciaObservadores}
+        \end{figure}
+
+ 
+    \end{column}
+\end{columns}
+Los componentes de $\hat{\Gamma}^{\mu}_{\nu\sigma}$ en este marco son: 
+\begin{equation}\label{Aecu:ComponentesGamma1}
+	\hat{\Gamma}^{0}_{00}=0, \hat{\Gamma}^{0}_{0j}=\hat{\Gamma}^{j}_{00}=\frac{1}{c^2}\hat{a}_{j}, \hat{\Gamma}^{j}_{0k}=\frac{1}{c}\hat{\epsilon}^{j}{}_{\mu k}\hat{\Omega}^{\mu}
+            =\frac{1}{c}\hat{\Omega}^{j}{}_{k},  \hat{\Gamma}^{i}_{j0}=\hat{\Gamma}^{0}_{ji}=\frac{1}{c}\hat{K}_{ij}, \hat{\Gamma}^{0}_{i0}=0
+\end{equation}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Desarrollo de la analogía %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Desarrollo de la analogía}
+En el marco de referencia de una congruencias de observadores acelerados, la componente espacial de la ecuación geodésica de una partícula de prueba que se mueve en el espacio-tiempo con cuadrivelocidad $U^{\mu}$.
+    \begin{align*}
+	\nonumber \hat{\nabla}_{\hat{U}}\hat{U}^{\alpha}&=\frac{D\hat{U}^{\alpha}}{d\tau}=    \frac{d\hat{U}^{i}}{d\tau}+ \hat{\Gamma}^{i}_{00} (\hat{U}^{0})^{2} + (\hat{\Gamma}^{i}_{0j} + \hat{\Gamma}^{i}_{j0}) \hat{U}^{0} \hat{U}^{j}+ \hat{\Gamma}^{i}_{jk} \hat{U}^{k} \hat{U}^{j} = 0
+\end{align*}
+\begin{equation}
+	\frac{\tilde{D}\hat{U}^i}{d\tau}=-\frac{\hat{a}^i}{c^2} (\hat{U}^{0})^{2}+\frac{1}{c} [\hat{U}\times (\hat{\Omega}+\hat{\omega})]^i\hat{U}^{0}-\frac{1}{c}\hat{\sigma}^{i}{}_{j}\hat{U}^{0} \hat{U}^{j}-\frac{1}{3c}\theta\delta^i{}_{j}\hat{U}^{0} \hat{U}^{j}
+\end{equation}
+
+se define el campo gravitoeléctrico y el campo gravitomagnético como \parencite{Costa2014}:
+\begin{equation}\label{CGEM_inerciales}
+	\ve{G}\equiv-\ve{a} \hspace{1cm} \ve{H}\equiv\vg{\omega}+\vg{\Omega}
+\end{equation}
+entonces en forma vectorial:
+\begin{equation}\label{FLorentz_inerciales}
+	\frac{\tilde{D} \ve{U}}{d\tau}=\frac{\hat{U}^0}{c}\left[\frac{\hat{U}^0}{c} \ve{G}+\ve{U} \times \ve{H}-\hat{\sigma}^{i}{}_{j} \hat{U}^{j} \hat{e}_{i}-\frac{1}{3}\theta\ve{U}\right]
+\end{equation}
+se asemeja a la ecuación de movimiento para una partícula en reposo con masa $m_e$, carga eléctrica $e$ y velocidad $\ve{u}_e$ ubicada en un campo eléctrico $\ve{E}$ y un campo magnético $\ve{B}$ $d\ve{p}/d\tau=e(u^0\ve{E}+\ve{u}_e\times\ve{B})$ \parencite{Misner1973,MunizOliva2002}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% Formalismo de quasi-Maxwell %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+\frametitle{Formalismo de quasi-Maxwell}
+Cuando el espacio-tiempo es estacionario, $h^{\alpha}{}_{\mu}h^{\beta}{}_{\nu}\mathscr{L}_u g_{\alpha\beta}=2\sigma_{\mu\nu}+\frac{2}{3}\theta h_{\mu\nu}=2K_{(\mu\nu)}=0$, es decir que $\theta=0$ y $\sigma_{\mu\nu}=0$ \parencite{MunizOliva2002,Natario2007}.
+\begin{equation}\label{FLorentz_inerciales_Quasi}
+	\frac{\tilde{D} \ve{U}}{d\tau}=\frac{\hat{U}^0}{c}\left[\frac{\hat{U}^0}{c} \ve{G}+\ve{U} \times \ve{H}\right]
+\end{equation}
+Además haciendo $\hat{\Omega}_{ij}=\hat{\omega}_{ij}=-\frac{1}{2}\epsilon_{ijk}\hat{H}^k$ y $\hat{H}_{ij}=\epsilon_{ijk}\hat{H}^k$ entonces $\hat{K}_{[ij]}=-\epsilon_{ijk}\hat{H}^k/2$
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ecuaciones de campo en la analogía de fuerzas inerciales %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Ecuaciones de campo en la analogía de fuerzas inerciales}
+\begin{center}
+\renewcommand{\arraystretch}{1.0} % separa un poco las filas
+\setlength{\tabcolsep}{1pt} % espacio entre columnas
+
+\begin{tabular}{p{0.35\textwidth} p{0.65\textwidth}}
+\textbf{Electromagnetismo} 
+& 
+\textbf{Gravitoelectromagnetismo} \\[0.4cm]
+
+$F^{\alpha\beta}{}_{;\beta} = 4\pi J^{\alpha}$ 
+& $R_{\mu\nu} = \frac{8\pi G_N}{c^4}\left(T_{\mu\nu} - \tfrac{1}{2}g_{\mu\nu}T^{\alpha}{}_{\alpha}\right)$ \\[0.4cm]
+
+$\tilde{\ve{\nabla}}\cdot\ve{E} =\frac{\rho_c}{\epsilon_0} + \ve{H}\cdot\ve{B}$
+& 
+$\tilde{\ve{\nabla}}\cdot\ve{G} = -4\pi G_N(2\rho + \frac{1}{c^2}T^{\alpha}{}_{\alpha}) + \frac{1}{c^2}\ve{G}^2 + \frac{1}{2}\ve{H}^2$ \\[0.4cm]
+$\tilde{\ve{\nabla}}\times\ve{B} = \frac{1}{c^2}\ve{G}\times\ve{B} + \mu_0\ve{j_e}$
+&
+$\tilde{\ve{\nabla}}\times\ve{H} = \frac{2}{c^2}\ve{G}\times\ve{H} - \frac{16\pi G_N}{c^2}\ve{j}$ \\[0.4cm]
+
+\textit{No análogo EM}
+&
+$\frac{1}{c^2}\tilde{\ve{\nabla}}_i G_j - \frac{1}{c^4}G_i G_j + \frac{1}{2c^2}\ve{H}^2 h_{ij} + \tilde{R}_{ij}
+= \frac{8\pi G_N}{c^4}\left(\tfrac{1}{2}h_{ij}T^{\alpha}{}_{\alpha} + T_{ij}\right)$\\[0.4cm]
+$\tilde{\nabla}\cdot\ve{B}=-\frac{1}{c^2}\ve{H}\cdot\ve{E}$ & $\tilde{\nabla}\cdot\ve{H}=-\frac{1}{c^2}\ve{H}\cdot\ve{G}$\\[0.4cm]
+$\tilde{\nabla}\times\ve{E}=\frac{1}{c^2}\ve{G}\times\ve{E}$ & $\tilde{\nabla}\times\ve{G}=0$
+\end{tabular}
+\end{center}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% GEM tensores de marea %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Gravitomagnetismo basado en tensores de marea}
+La ecuación de desvío geodésico para dos partículas que se mueven con cuadrivelocidad $u^{\mu}$ en un espacio-tiempo es y la ecuación de desvío de la línea de mundo para dos partículas con la misma razón $q/m$ que se mueven a una cuadrivelocidad $u^{\mu}$ en un campo EM en el espacio tiempo de Minkowski son respectivamente \parencite{Costa2006}:
+
+\begin{equation}\label{Ecuacion de desvio geodesico}
+    \frac{D^2\delta x^{\mu}}{d\tau^2}=-R^\mu{}_{\nu\sigma\rho}u^{\nu}u^{\rho}\delta x^{\sigma} \hspace{1cm}     \frac{D^2 \delta x^{\mu}}{d\tau^2}=\frac{q}{m}\nabla_{\sigma}F^{\mu}{}_{\nu}(\ve{x})u^{\nu}\delta x^{\sigma}
+\end{equation}
+
+Donde las partículas tienen coordenadas $x^\mu(\tau)$ y $x^\mu_2(\tau)=x^{\mu}(\tau)+\delta x^{\mu}(\tau)$, y $\delta x^{\mu}(\tau)$ es el vector de desviación. Un observador con cuadrivelocidad $u^\mu$  mide los campos eléctrico y magnético como $E^{\alpha}=F^{\alpha\beta}u_{\beta}$ y $B^{\alpha}=\star F^{\alpha\beta}u_{\beta}$ respectivamente, donde $\star F^{\alpha \beta}=\tilde{\epsilon}^{\,\mu\nu\alpha\beta}F_{\mu\nu}/(2c)$. Los tensores de marea se pueden definir como:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.0} % separa un poco las filas
+\setlength{\tabcolsep}{5pt} % espacio entre columnas
+
+\begin{tabular}{p{0.48\textwidth}|p{0.48\textwidth}} % <-- línea vertical añadida
+$E_{\alpha\gamma}=u^{\beta}\nabla_{\gamma}F_{\alpha\beta}$
+& 
+$\mathbb{E}_{\mu\nu}=R_{\mu\lambda\nu\sigma}u^{\lambda}u^{\sigma}$\\[0.2cm]
+$B_{\alpha\gamma}=u^{\beta}\star\nabla_{\gamma}F_{\alpha\beta}=\frac{1}{2c}u^{\beta}\tilde{\epsilon}^{\,\mu\nu}{}_{\alpha\beta}\nabla_{\gamma}F_{\mu\nu}$ 
+& 
+$\mathbb{H}_{\mu\nu}=\star R_{\mu\lambda\nu\sigma}u^{\lambda}u^{\sigma}=\frac{1}{2c}\tilde{\epsilon}^{\,\alpha\beta}{}_{\mu\lambda}R_{\alpha\beta\nu\sigma}u^{\lambda}u^{\sigma}$
+\end{tabular}
+\end{center}
+
+    
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Descomposición del tensor de Riemann %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Descomposición del tensor de Riemann}
+    El tensor de Riemann se puede escribir en términos de los tensores de marea gravitoeléctrico y gravitomagnético y de un tercer tensor denotado como $\mathbb{F_{\mu\nu}}$:
+\begin{equation}\label{DescomposicionRiemann}
+    R^{\alpha\beta}{}_{\gamma\delta}=\frac{4}{c^4}\mathbb{E}^{[\alpha}{}_{[\gamma}u_{\delta]}u^{\beta]}+\frac{2}{c^3}\epsilon^{\chi\kappa}{}_{\gamma\delta}u_\kappa\mathbb{H}_{\chi}{}^{[\beta}u^{\alpha]}+\frac{2}{c^3}\epsilon^{\chi\alpha\beta\kappa}u_\kappa\mathbb{H}_{\chi}{}_{[\delta}u_
+    {\gamma]}+\frac{1}{c^4}\epsilon^{\alpha\beta\chi\tau}\epsilon^{\iota\kappa}{}_{\gamma\delta}\mathbb{F}_{\chi\iota}u_{\tau}u_{\kappa}
+\end{equation}
+
+donde $\mathbb{F}_{\chi\iota}=\star R\star^{\chi\lambda\iota\eta}u_{\lambda}u_{\eta}=\frac{1}{4}\epsilon_{\rho\mu\chi\lambda}\epsilon_{\nu\sigma\iota\eta}R^{\rho\mu\nu\sigma}u^{\eta}u^{\lambda}$ es conocido como el tensor de Bel \parencite{Costa2014, Gmez-Lobo2007} y no tiene análogo electromagnético. Se puede observar que el tensor de Bel es un tensor simétrico y ademas espacial, es decir $\mathbb{F}_{\mu\nu}=\mathbb{F}_{\nu\mu}$ y $\mathbb{F}_{\mu\nu}u^{\mu}=\mathbb{F}_{\mu\nu}u^{\nu}=0$, con 6 componentes independientes, al igual que el tensor de marea gravitoeléctrico, mientras que el tensor de marea gravitomagnético tiene 8 componentes independientes.
+Las 20 componentes independientes del tensor de Riemann estan descritos por estos tres tensores. El tensor Hodge dual en los dos primeros indices del tensor de Riemann puede ser calculado contrayendo \ref{DescomposicionRiemann} con $1/2\epsilon_{\alpha\beta\epsilon\xi}$.
+\begin{multline}\label{HodgeRiemannDescomposicion}
+    \star R^{\varepsilon\xi}{}_{\gamma\delta}=\frac{2}{c^4}\epsilon^{\varepsilon\xi}{}_{\alpha\beta}\mathbb{E}^{[\alpha}{}_{[\gamma}u_{\delta]}u^{\beta]}
+    +\frac{1}{c^3}\epsilon^{\varepsilon\xi}{}_{\alpha\beta}\epsilon^{\mu\chi}{}_{\gamma\delta}u_{\chi}\mathbb{H}_{\mu}{}^{\beta}u^{\alpha}\\+\frac{4}{c^3}u^{[\varepsilon}\mathbb{H}^{\xi]}{}_{[\delta}u_{\gamma]}
+    -\frac{1}{2c^4}\epsilon^{\mu\nu}{}_{\gamma\delta}u_{\nu}u^{[\xi}\mathbb{F}^{\varepsilon]}{}_{\mu}
+\end{multline}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Ecuaciones campo tensores de marea %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Ecuaciones campo tensores de marea}
+A partir de las ecuaciones de campo de Einstein y de las identidades de Bianchi $\star R^{\gamma\alpha}{}_{\gamma\beta}=0$:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.0} % separa un poco las filas
+\setlength{\tabcolsep}{1pt} % espacio entre columnas
+
+\begin{tabular}{p{0.45\textwidth} p{0.55\textwidth}}
+\textbf{Electromagnetismo} 
+& 
+\textbf{Gravitoelectromagnetismo} \\[0.4cm]
+
+$F^{\alpha\beta}{}_{;\beta} = 4\pi J^{\alpha}$ 
+& $R_{\mu\nu} = \frac{8\pi G_N}{c^4}\left(T_{\mu\nu} - \tfrac{1}{2}g_{\mu\nu}T^{\alpha}{}_{\alpha}\right)$ \\[0.4cm]
+
+$E^{\alpha}{}_{\alpha}=\frac{\rho_c}{\epsilon_0}$
+& 
+$\mathbb{E}^{\alpha}{}_{\alpha}=4\pi G_N(2\rho+\frac{1}{c^2}T^{\alpha}{}_{\alpha})$ \\[0.4cm]
+$B_{[\alpha\beta]}=\frac{1}{2}\star F_{\alpha\beta;\gamma}u^{\gamma}-\frac{\mu_0}{c}\epsilon_{\alpha\beta\sigma\gamma}j_e^{\sigma}u^{\gamma}$
+&
+$\mathbb{H}_{[\alpha\beta]}=-\frac{4\pi G_N}{c^3} \epsilon_{\alpha\beta\sigma\gamma}j^{\sigma}u^{\gamma}$ \\[0.4cm]
+
+\textit{No análogo EM}
+&
+$\mathbb{F}^{\alpha}{}_{\beta}+\mathbb{E}^{\alpha}{}_{\beta}-\mathbb{F}^{\sigma}{}_{\sigma}h^{\alpha}{}_{\beta}=\frac{8\pi G_N}{c^2}[\frac{1}{2}T^{\gamma}{}_{\gamma}h^{\alpha}{}_{\beta}-T^{\langle \alpha \rangle}{}_{\langle \beta\rangle}]$\\[0.4cm]
+$B^{\alpha}{}_{\alpha}=0$ & $\mathbb{H}^{\alpha}{}_{\alpha}=0$\\[0.4cm]
+$E_{[\alpha\beta]}=\frac{1}{2}F_{\alpha\beta;\gamma}u^{\gamma}$ & $\mathbb{E}_{[\alpha\beta]}=0$\\[0.4cm]
+\textit{No análogo EM}
+& $\mathbb{F}_{[\alpha\beta]}=0$
+\end{tabular}
+\end{center}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Comandos adicionales}
+
+\subsection{Diapositivas especiales}
+
+\begin{frame}
+\frametitle{Fuerza sobre una partícula con espín (Wald)}
+
+\small
+
+\textbf{Métrica en el límite lejano ($1/r$):}
+\begin{equation}
+ds^2 \approx -c^2\left(1-2\frac{G_NM}{c^2r}\right) dt^2 
+- \frac{4G_N}{c^2}\frac{(\mathbf{J}\times \mathbf{r})\cdot d\mathbf{x}}{r^3} dt
++ \left(1+2\frac{G_NM}{c^2r}\right)d\mathbf{x}^2
+\end{equation}
+
+\vspace{0.3cm}
+
+\textbf{Fuerza MPD (componente espacial):}
+\begin{equation}
+f^i = -\frac{c}{2}R^i{}_{0jk}S^{jk}
+\end{equation}
+
+\vspace{0.3cm}
+
+\textbf{Resultado:}
+\begin{equation}
+\mathbf{f}=-\frac{G_N}{c^2}\nabla\left[
+\frac{3(\mathbf{J}\cdot\hat{\mathbf{r}})(\mathbf{S}\cdot\hat{\mathbf{r}})
+-(\mathbf{J}\cdot\mathbf{S})}{r^3}
+\right]
+\end{equation}
+
+\vspace{0.3cm}
+
+\textbf{Analogía:} interacción tipo dipolo magnético
+
+\end{frame}
+
+
+
+% Comentar desde este punto hasta "\end{frame}" para no mostrar referencias. Esto se debe hacer sólo si NUNCA se usó el comando \cite en las diapositivas.
+\section{Referencias}
+\begin{frame}[allowframebreaks]
+\frametitle{Referencias}
+%\bibliographystyle{amsalpha} %Estilo bibliografía.
+%{\scriptsize \justifying
+%\bibliography{References}}
+\printbibliography
+\end{frame}
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

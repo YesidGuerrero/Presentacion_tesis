@@ -1,0 +1,12 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Introducción}{3}{0}{1}
+\beamer@sectionintoc {2}{Fundamentos}{4}{0}{2}
+\beamer@sectionintoc {3}{Gravitoelectromagnetismo}{5}{0}{3}
+\beamer@subsectionintoc {3}{1}{Basado en la teoría linealizada}{5}{0}{3}
+\beamer@subsectionintoc {3}{2}{Basado en las fuerzas inerciales}{6}{0}{3}
+\beamer@subsectionintoc {3}{3}{Basado en los tensores de marea}{7}{0}{3}
+\beamer@subsectionintoc {3}{4}{Enumeración, listas y descripciones}{10}{0}{3}
+\beamer@subsectionintoc {3}{5}{Citas bibliográficas}{13}{0}{3}
+\beamer@sectionintoc {4}{Comandos adicionales}{14}{0}{4}
+\beamer@subsectionintoc {4}{1}{Diapositivas especiales}{16}{0}{4}
+\beamer@sectionintoc {5}{Referencias}{22}{0}{5}
