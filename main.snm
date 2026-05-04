@@ -1,2 +1,41 @@
-\beamer@slide {eq1}{6}
-\beamer@slide {eq2}{6}
+\beamer@slide {EcuMomento}{3}
+\beamer@slide {EcuEspín}{3}
+\beamer@slide {Momentoespin}{4}
+\beamer@slide {aproximaciones}{6}
+\beamer@slide {Condiciones TSSC y PSSC}{6}
+\beamer@slide {FuerzaMPD}{6}
+\beamer@slide {Metrica_Kerr}{7}
+\beamer@slide {eq1}{7}
+\beamer@slide {SimbolosChristoffel}{8}
+\beamer@slide {TensorRicci_Esca_Linealizadas}{8}
+\beamer@slide {EqEinsteinLinealizadash}{8}
+\beamer@slide {potencialesGEM}{9}
+\beamer@slide {ElementoLinea}{9}
+\beamer@slide {CamposGEM}{10}
+\beamer@slide {GaussGE_GM}{10}
+\beamer@slide {LeyFaraday GEM1}{10}
+\beamer@slide {LorenztGEM1}{10}
+\beamer@slide {Aecu: etetrada}{11}
+\beamer@slide {Aecu:evolucion tetrada}{11}
+\beamer@slide {Aecu:descoK}{12}
+\beamer@slide {fig:CongruenciaObservadores}{12}
+\beamer@slide {Aecu:ComponentesGamma1}{12}
+\beamer@slide {CGEM_inerciales}{13}
+\beamer@slide {FLorentz_inerciales}{13}
+\beamer@slide {FLorentz_inerciales_Quasi}{14}
+\beamer@slide {Ecuacion:R0i0j estacionario}{14}
+\beamer@slide {Ecuacion:R0ijk estacionario}{14}
+\beamer@slide {Ecuacion:Rijkl estacionario}{14}
+\beamer@slide {Ecuacion de desvio geodesico}{16}
+\beamer@slide {DescomposicionRiemann}{17}
+\beamer@slide {HodgeRiemannDescomposicion}{17}
+\beamer@slide {TensorMareaElectrico_Weyl}{19}
+\beamer@slide {TensorMareaMagnetico_Weyl}{19}
+\beamer@slide {MetricaPotencias1r}{20}
+\beamer@slide {Ri0jk}{20}
+\beamer@slide {Fuerza MPD FI}{21}
+\beamer@slide {FuerzaDipolo FI}{21}
+\beamer@slide {FuerzaTensorMarea}{22}
+\beamer@slide {Aexpandida}{23}
+\beamer@slide {Aecu:Adipolar3}{23}
+\beamer@slide {Bdipolo}{23}

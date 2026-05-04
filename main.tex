@@ -72,14 +72,28 @@
 
 
 \usepackage[backend=biber,style=authoryear]{biblatex}   %yesid
-\addbibresource{References.bib}   %yesid
-
+\addbibresource{references.bib}   %yesid
+%\bibliographystyle{plain} %yesid
 
 \newcommand{\ve}[1]{\mathbf{#1}}    %Creado por Yesid
 \newcommand{\vg}[1]{\boldsymbol{#1}}   %Creado por Yesid
 \newcommand{\ite}{\hat{\imath}} %Creado por Yesid
 \newcommand{\jte}{\hat{\jmath}} %Creado por Yesid
 \newcommand{\kte}{\hat{k}} %Creado por Yesid
+
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstset{
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue},
+  commentstyle=\color{green!60!black},
+  stringstyle=\color{red},
+  showstringspaces=false,
+  breaklines=true,
+  frame=single
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -139,11 +153,11 @@ La trayectoria de una partícula sin estructura interna:
 
 En la aproximación polo-dipolo ( Ecuaciones de Mathisson–Papapetrou–Dixon), el movimiento difiere de las geodésicas:
 
-\begin{equation}
+\begin{equation}\label{EcuMomento}
 \frac{Dp^\mu}{d\tau}=- \frac{1}{2} R^\mu{}_{\nu\kappa\lambda}u^\nu S^{\kappa\lambda}
 \end{equation}
 
-\begin{equation}
+\begin{equation}\label{EcuEspín}
 \frac{DS^{\mu\nu}}{d\tau}= p^\mu u^\nu- u^\mu p^\nu
 \end{equation}
 
@@ -174,7 +188,7 @@ Cond. in: $r_0=10$, $\theta_0=\pi/2$, $\phi_0=0$, $v_0=0$, $a=s=0.9$.}
 
 A partir de la contracción con $u_\nu$ y usando $u^\mu u_\mu=-c^2$, se obtiene:
 
-\begin{equation}
+\begin{equation}\label{Momentoespin}
     p^\mu = m u^\mu - \frac{u_\nu}{c^2} \frac{D S^{\mu\nu}}{d\tau}
 \end{equation}
 
@@ -225,6 +239,7 @@ S^{\mu\nu}p_\nu = 0
 \end{equation}
 
 \vspace{0.3cm}
+
 
 \begin{equation}
 u^\mu = N \left(v^\mu + \frac{1}{2c^2\mu^2\Delta_s}
@@ -294,7 +309,7 @@ por lo tanto, la masa cinemática es aproximadamente igual a la masa dinámica $
 \begin{equation}\label{Condiciones TSSC y PSSC}
 	S^{\mu\nu}p_\nu=S^{\mu\nu}\mu v_\nu=0   \Longrightarrow   S^{\mu\nu} u_\nu \approx 0
 \end{equation}
-es decir, en el límite de espín débil, las condiciones de Tulczyjew y Pirani son aproximadamente las mismas. La ecuación (\ref{Momentoespin}) se reduce a $p^\mu \approx mu^\mu$, y reemplazando en (\ref{EcuMomento}) se obtiene la fuerza espín-curvatura de Mathisson-Papapetrou:
+es decir, en el límite de espín débil, las condiciones de Tulczyjew y Pirani son aproximadamente las mismas. La ecuación \ref{Momentoespin} se reduce a $p^\mu \approx mu^\mu$, y reemplazando en (\ref{EcuMomento}) se obtiene la fuerza espín-curvatura de Mathisson-Papapetrou:
 
 \begin{equation}\label{FuerzaMPD}
 	f^\mu=m \frac{D u^\mu}{d \tau}=- \frac{1}{2} R^\mu{}_{\nu\kappa\lambda}u^\nu S^{\kappa\lambda}
@@ -306,7 +321,8 @@ es decir, en el límite de espín débil, las condiciones de Tulczyjew y Pirani 
 \section{Fundamentos}
 \begin{frame}
 \frametitle{Métrica de Kerr}
-En 1963, Roy Kerr propuso la solución en el vacío a las ecuaciones de campo de Einstein (\ref{EcCampoEinstein}), de una fuente en rotación con simetría axial \cite{Kerr1963}. La métrica de Kerr depende de dos cantidades físicas: la masa $M$ y la rotación descrita por el parámetro $a$. La solución es estacionaria y axialmente simétrica, esto se evidencia en el elemento de línea que no depende de $t$ y $\phi$:
+En 1963, Roy Kerr propuso la solución en el vacío a las ecuaciones de campo de Einstein
+, de una fuente en rotación con simetría axial \cite{Kerr1963}. La métrica de Kerr depende de dos cantidades físicas: la masa $M$ y la rotación descrita por el parámetro $a$. La solución es estacionaria y axialmente simétrica, esto se evidencia en el elemento de línea que no depende de $t$ y $\phi$:
 \begin{multline} \label{Metrica_Kerr}
 ds^2=-c^2\left(1-\frac{2G_NMr}{c^2\rho^2}\right)dt^2+\frac{\rho^2}{\Delta}\, dr^2+\rho^2 \,d\theta^2\\+\left(r^2+a^2+\frac{2G_NMa^2r \sin^2 \theta}{c^2 \rho^2}\right)\sin^2 \theta \,d\phi^2-\frac{4G_NMar}{c^2\rho^2}\sin^2\theta\, c\,dt\, d\phi
 \end{multline}
@@ -367,10 +383,10 @@ La métrica se puede escribir como:
 
 La métrica de Kerr para un cuerpo de rotación baja y campo débil, es decir, $a \ll1$ y $2GM/(c^2r) \ll 1$:
 \begin{multline}
-ds^2=-c^2\left(1-\frac{2GM}{c^2r}\right)dt^2
-+\left(1+\frac{2GM}{c^2r}\right)\, dr^2 \\ 
+ds^2=-c^2\left(1-\frac{2G_NM}{c^2r}\right)dt^2
++\left(1+\frac{2G_NM}{c^2r}\right)\, dr^2 \\ 
 +r^2 \,d\theta^2+r^2\sin^2 \theta \,d\phi^2
-+\text{\fcolorbox{red}{white}{$-\frac{4GJ}{c^2r}\sin^2\theta$}}\, dt\, d\phi
++\text{\fcolorbox{red}{white}{$-\frac{4G_NJ}{c^2r}\sin^2\theta$}}\, dt\, d\phi
 \end{multline}
 \end{frame}
 
@@ -500,7 +516,7 @@ entonces en forma vectorial:
 \begin{equation}\label{FLorentz_inerciales}
 	\frac{\tilde{D} \ve{U}}{d\tau}=\frac{\hat{U}^0}{c}\left[\frac{\hat{U}^0}{c} \ve{G}+\ve{U} \times \ve{H}-\hat{\sigma}^{i}{}_{j} \hat{U}^{j} \hat{e}_{i}-\frac{1}{3}\theta\ve{U}\right]
 \end{equation}
-se asemeja a la ecuación de movimiento para una partícula en reposo con masa $m_e$, carga eléctrica $e$ y velocidad $\ve{u}_e$ ubicada en un campo eléctrico $\ve{E}$ y un campo magnético $\ve{B}$ $d\ve{p}/d\tau=e(u^0\ve{E}+\ve{u}_e\times\ve{B})$ \parencite{Misner1973,MunizOliva2002}
+se asemeja a la ecuación de movimiento para una partícula con masa $m_e$, carga eléctrica $e$ y velocidad $\ve{u}_e$ ubicada en un campo eléctrico $\ve{E}$ y un campo magnético $\ve{B}$ $d\ve{p}/d\tau=e(u^0\ve{E}+\ve{u}_e\times\ve{B})$ \parencite{Misner1973,MunizOliva2002}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -515,7 +531,15 @@ Cuando el espacio-tiempo es estacionario, $h^{\alpha}{}_{\mu}h^{\beta}{}_{\nu}\m
 	\frac{\tilde{D} \ve{U}}{d\tau}=\frac{\hat{U}^0}{c}\left[\frac{\hat{U}^0}{c} \ve{G}+\ve{U} \times \ve{H}\right]
 \end{equation}
 Además haciendo $\hat{\Omega}_{ij}=\hat{\omega}_{ij}=-\frac{1}{2}\epsilon_{ijk}\hat{H}^k$ y $\hat{H}_{ij}=\epsilon_{ijk}\hat{H}^k$ entonces $\hat{K}_{[ij]}=-\epsilon_{ijk}\hat{H}^k/2$
+
+ las componentes del tensor de Riemann son:
+\begin{align}
+	\label{Ecuacion:R0i0j estacionario} \hat{R}_{0i0j}&=-\frac{1}{c^2}\hat{\tilde{\nabla}}_j\hat{G}_i+\frac{1}{c^4}\hat{G}_j\hat{G}_i-\frac{1}{4c^2}\hat{H}^{m}{}_{j}\hat{H}_{im}\\
+	\label{Ecuacion:R0ijk estacionario} \hat{R}_{0ijk}&=-\frac{1}{2c}\hat{\nabla}_k\hat{H}_{ij}+\frac{1}{2c}\hat{\nabla}_j\hat{H}_{ik}-\frac{1}{c^3}\hat{H}_{jk}\hat{G}_i\\
+	\label{Ecuacion:Rijkl estacionario} \hat{R}_{ijkl}&=\hat{\tilde{R}}_{ijkl}+\frac{1}{4c^2}\hat{H}_{ik}\hat{H}_{jl}-\frac{1}{4c^2}\hat{H}_{il}\hat{H}_{jk}+\frac{1}{2c^2}\hat{H}_{kl}\hat{H}_{ij}
+\end{align}
 \end{frame}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Ecuaciones de campo en la analogía de fuerzas inerciales %%
@@ -527,7 +551,7 @@ Además haciendo $\hat{\Omega}_{ij}=\hat{\omega}_{ij}=-\frac{1}{2}\epsilon_{ijk}
 \renewcommand{\arraystretch}{1.0} % separa un poco las filas
 \setlength{\tabcolsep}{1pt} % espacio entre columnas
 
-\begin{tabular}{p{0.35\textwidth} p{0.65\textwidth}}
+\begin{tabular}{p{0.30\textwidth} p{0.60\textwidth}}
 \textbf{Electromagnetismo} 
 & 
 \textbf{Gravitoelectromagnetismo} \\[0.4cm]
@@ -544,8 +568,7 @@ $\tilde{\ve{\nabla}}\times\ve{H} = \frac{2}{c^2}\ve{G}\times\ve{H} - \frac{16\pi
 
 \textit{No análogo EM}
 &
-$\frac{1}{c^2}\tilde{\ve{\nabla}}_i G_j - \frac{1}{c^4}G_i G_j + \frac{1}{2c^2}\ve{H}^2 h_{ij} + \tilde{R}_{ij}
-= \frac{8\pi G_N}{c^4}\left(\tfrac{1}{2}h_{ij}T^{\alpha}{}_{\alpha} + T_{ij}\right)$\\[0.4cm]
+$\hat{\tilde{R}}_{ij}+\frac{1}{c^2}\hat{\nabla}_j\hat{G}_i=\frac{1}{c^4}\hat{G}_j\hat{G}_i+\frac{1}{2c^2}\hat{H}_i\hat{H}_j-\frac{1}{2c^2}\hat{\delta}_{ji}|\ve{H}|^2+\frac{8\pi G_N}{c^4}(\hat{T}_{ij}-\frac{1}{2}\hat{\delta}_{ij}\hat{T})$\\[0.4cm]
 $\tilde{\nabla}\cdot\ve{B}=-\frac{1}{c^2}\ve{H}\cdot\ve{E}$ & $\tilde{\nabla}\cdot\ve{H}=-\frac{1}{c^2}\ve{H}\cdot\ve{G}$\\[0.4cm]
 $\tilde{\nabla}\times\ve{E}=\frac{1}{c^2}\ve{G}\times\ve{E}$ & $\tilde{\nabla}\times\ve{G}=0$
 \end{tabular}
@@ -556,6 +579,7 @@ $\tilde{\nabla}\times\ve{E}=\frac{1}{c^2}\ve{G}\times\ve{E}$ & $\tilde{\nabla}\t
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%% GEM tensores de marea %%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Basado en tensores de marea}
 \begin{frame}
 \frametitle{Gravitomagnetismo basado en tensores de marea}
 La ecuación de desvío geodésico para dos partículas que se mueven con cuadrivelocidad $u^{\mu}$ en un espacio-tiempo es y la ecuación de desvío de la línea de mundo para dos partículas con la misma razón $q/m$ que se mueven a una cuadrivelocidad $u^{\mu}$ en un campo EM en el espacio tiempo de Minkowski son respectivamente \parencite{Costa2006}:
@@ -589,14 +613,13 @@ $\mathbb{H}_{\mu\nu}=\star R_{\mu\lambda\nu\sigma}u^{\lambda}u^{\sigma}=\frac{1}
 
 \begin{frame}
 \frametitle{Descomposición del tensor de Riemann}
-    El tensor de Riemann se puede escribir en términos de los tensores de marea gravitoeléctrico y gravitomagnético y de un tercer tensor denotado como $\mathbb{F_{\mu\nu}}$:
+    El tensor de Riemann se puede escribir en términos de los tensores de marea gravitoeléctrico y gravitomagnético y de un tercer tensor denotado como $\mathbb{F_{\mu\nu}}$ a partir de la descomposición espacial  $(h^u)^{\alpha\beta} \equiv g^{\alpha\beta}+\frac{1}{c^2}u^{\alpha}u^{\beta}$ y temporal $(\mathsf{T}^u)^{\alpha\beta}\equiv-\frac{1}{c^2}u^{\alpha}u^{\beta}$:
 \begin{equation}\label{DescomposicionRiemann}
     R^{\alpha\beta}{}_{\gamma\delta}=\frac{4}{c^4}\mathbb{E}^{[\alpha}{}_{[\gamma}u_{\delta]}u^{\beta]}+\frac{2}{c^3}\epsilon^{\chi\kappa}{}_{\gamma\delta}u_\kappa\mathbb{H}_{\chi}{}^{[\beta}u^{\alpha]}+\frac{2}{c^3}\epsilon^{\chi\alpha\beta\kappa}u_\kappa\mathbb{H}_{\chi}{}_{[\delta}u_
     {\gamma]}+\frac{1}{c^4}\epsilon^{\alpha\beta\chi\tau}\epsilon^{\iota\kappa}{}_{\gamma\delta}\mathbb{F}_{\chi\iota}u_{\tau}u_{\kappa}
 \end{equation}
 
-donde $\mathbb{F}_{\chi\iota}=\star R\star^{\chi\lambda\iota\eta}u_{\lambda}u_{\eta}=\frac{1}{4}\epsilon_{\rho\mu\chi\lambda}\epsilon_{\nu\sigma\iota\eta}R^{\rho\mu\nu\sigma}u^{\eta}u^{\lambda}$ es conocido como el tensor de Bel \parencite{Costa2014, Gmez-Lobo2007} y no tiene análogo electromagnético. Se puede observar que el tensor de Bel es un tensor simétrico y ademas espacial, es decir $\mathbb{F}_{\mu\nu}=\mathbb{F}_{\nu\mu}$ y $\mathbb{F}_{\mu\nu}u^{\mu}=\mathbb{F}_{\mu\nu}u^{\nu}=0$, con 6 componentes independientes, al igual que el tensor de marea gravitoeléctrico, mientras que el tensor de marea gravitomagnético tiene 8 componentes independientes.
-Las 20 componentes independientes del tensor de Riemann estan descritos por estos tres tensores. El tensor Hodge dual en los dos primeros indices del tensor de Riemann puede ser calculado contrayendo \ref{DescomposicionRiemann} con $1/2\epsilon_{\alpha\beta\epsilon\xi}$.
+donde $\mathbb{F}_{\chi\iota}=\star R\star^{\chi\lambda\iota\eta}u_{\lambda}u_{\eta}=\frac{1}{4}\epsilon_{\rho\mu\chi\lambda}\epsilon_{\nu\sigma\iota\eta}R^{\rho\mu\nu\sigma}u^{\eta}u^{\lambda}$ es conocido como el tensor de Bel \parencite{Costa2014, Gmez-Lobo2007} y no tiene análogo electromagnético. El tensor Hodge dual en los dos primeros indices del tensor de Riemann puede ser calculado contrayendo \ref{DescomposicionRiemann} con $1/2\epsilon_{\alpha\beta\epsilon\xi}$.
 \begin{multline}\label{HodgeRiemannDescomposicion}
     \star R^{\varepsilon\xi}{}_{\gamma\delta}=\frac{2}{c^4}\epsilon^{\varepsilon\xi}{}_{\alpha\beta}\mathbb{E}^{[\alpha}{}_{[\gamma}u_{\delta]}u^{\beta]}
     +\frac{1}{c^3}\epsilon^{\varepsilon\xi}{}_{\alpha\beta}\epsilon^{\mu\chi}{}_{\gamma\delta}u_{\chi}\mathbb{H}_{\mu}{}^{\beta}u^{\alpha}\\+\frac{4}{c^3}u^{[\varepsilon}\mathbb{H}^{\xi]}{}_{[\delta}u_{\gamma]}
@@ -622,13 +645,13 @@ A partir de las ecuaciones de campo de Einstein y de las identidades de Bianchi 
 & 
 \textbf{Gravitoelectromagnetismo} \\[0.4cm]
 
-$F^{\alpha\beta}{}_{;\beta} = 4\pi J^{\alpha}$ 
+$F^{\alpha\beta}{}_{;\beta} = \frac{4\pi k_c}{c^2} J^{\alpha}$ 
 & $R_{\mu\nu} = \frac{8\pi G_N}{c^4}\left(T_{\mu\nu} - \tfrac{1}{2}g_{\mu\nu}T^{\alpha}{}_{\alpha}\right)$ \\[0.4cm]
 
-$E^{\alpha}{}_{\alpha}=\frac{\rho_c}{\epsilon_0}$
+$E^{\alpha}{}_{\alpha}=4\pi k_c \rho_c$
 & 
 $\mathbb{E}^{\alpha}{}_{\alpha}=4\pi G_N(2\rho+\frac{1}{c^2}T^{\alpha}{}_{\alpha})$ \\[0.4cm]
-$B_{[\alpha\beta]}=\frac{1}{2}\star F_{\alpha\beta;\gamma}u^{\gamma}-\frac{\mu_0}{c}\epsilon_{\alpha\beta\sigma\gamma}j_e^{\sigma}u^{\gamma}$
+$B_{[\alpha\beta]}=\frac{1}{2}\star F_{\alpha\beta;\gamma}u^{\gamma}-\frac{2\pi k_c}{c^3}\epsilon_{\alpha\beta\sigma\gamma}j_e^{\sigma}u^{\gamma}$
 &
 $\mathbb{H}_{[\alpha\beta]}=-\frac{4\pi G_N}{c^3} \epsilon_{\alpha\beta\sigma\gamma}j^{\sigma}u^{\gamma}$ \\[0.4cm]
 
@@ -644,35 +667,55 @@ $E_{[\alpha\beta]}=\frac{1}{2}F_{\alpha\beta;\gamma}u^{\gamma}$ & $\mathbb{E}_{[
 \end{frame}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Comandos adicionales}
 
-\subsection{Diapositivas especiales}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%% TENSOR DE WEYL %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Fuerza sobre una partícula con espín (Wald)}
+\frametitle{Tensor de Weyl}
+El tensor de Riemann y el tensor de Weyl están relacionados de la siguiente manera \cite{Costa2006}:
+\begin{equation}
+	R_{\alpha\beta\gamma\delta}=C_{\alpha\beta\gamma\delta}+g_{\alpha[\gamma}R_{\delta]\beta}+g_{\beta[\delta}R_{\gamma]\alpha}+\frac{1}{3}g_{\alpha[\delta}g_{\gamma]\beta}R
+\end{equation}
+donde $C_{\alpha\beta\gamma\delta}$ es el tensor de Weyl, el cual por definición no tiene traza y cumple con la propiedad $\star C_{\alpha\beta\gamma\delta}=C\star_{\alpha\beta\gamma\delta}$.
+
+El tensor de marea gravitoeléctrico y gravitomagnético se escriben como:
+
+\begin{equation}\label{TensorMareaElectrico_Weyl}
+\mathbb{E}_{\alpha\beta}=\mathcal{E}_{\alpha\beta}+\frac{1}{2}[g_{\alpha\beta}R_{\gamma\delta}u^{\gamma}u^{\delta}-R_{\alpha\beta}-2u_{(\alpha}R_{\beta)\delta}u^{\delta}]+\frac{R}{6}[g_{\alpha\beta}+u_{\alpha}u_{\beta}]
+\end{equation}
+
+\begin{equation}\label{TensorMareaMagnetico_Weyl}
+	\mathbb{H}_{\alpha\beta}=\mathcal{H}_{\alpha\beta}+\frac{1}{2} \tilde{\epsilon}_{\alpha\beta\sigma\gamma}R^{\sigma}{}_{\delta}u^{\gamma}u^{\delta}
+\end{equation}
+
+donde $\mathcal{E}_{\alpha\beta}\equiv C_{\alpha\gamma\beta\sigma}u^{\gamma}u^{\sigma}$ y $\mathcal{H}_{\alpha\beta}\equiv \star C_{\alpha\gamma\beta\sigma}u^{\gamma}u^{\sigma}$ son la parte eléctrica y magnética del tensor de Weyl respectivamente.
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Ecuaciones MPD y GEM}
+\begin{frame}
+
+\frametitle{Fuerza sobre una partícula con espín}
 
 \small
 
-\textbf{Métrica en el límite lejano ($1/r$):}
-\begin{equation}
-ds^2 \approx -c^2\left(1-2\frac{G_NM}{c^2r}\right) dt^2 
-- \frac{4G_N}{c^2}\frac{(\mathbf{J}\times \mathbf{r})\cdot d\mathbf{x}}{r^3} dt
-+ \left(1+2\frac{G_NM}{c^2r}\right)d\mathbf{x}^2
+Métrica en el límite lejano ($1/r$) (\cite{Misner1973}):
+\begin{multline}\label{MetricaPotencias1r}
+ds^2=-c^2\left(1-2\frac{G_NM}{c^2r}+2\left(\frac{G_NM}{c^2r}\right)^2\right) dt^2-c\left(4 \epsilon_{ijk}\frac{G_N J^j x^k}{c^3r^3}\right) dtdx^i \\+\left(1+2\frac{G_NM}{c^2r}+\frac{3}{2}\left(\frac{G_NM}{c^2r}\right)^2\right)\delta_{jk}dx^j dx^k +O\left(\frac{1}{r^3}\right)
+\end{multline}
+cuyo componente $R^i{}_{0jk}$ del tensor de Riemann esta dado por (\cite{Wald1972})
+\begin{equation}\label{Ri0jk}
+	R^i{}_{0jk}=\frac{G_N}{c^3}\frac{\partial}{\partial x^i}\left[\epsilon_{kmn}J^m \frac{\partial}{\partial x^j}\left(\frac{x^n}{r^3}\right)-\epsilon_{jmn}J^m \frac{\partial}{\partial x^k}\left(\frac{x^n}{r^3}\right) \right]+O\left(\frac{1}{r^5}\right)
 \end{equation}
 
-\vspace{0.3cm}
-
-\textbf{Fuerza MPD (componente espacial):}
+Reemplazando en la fuerza MPD para la aproximación de campo y espín débil
 \begin{equation}
 f^i = -\frac{c}{2}R^i{}_{0jk}S^{jk}
 \end{equation}
-
-\vspace{0.3cm}
-
-\textbf{Resultado:}
+la fuerza es:
 \begin{equation}
 \mathbf{f}=-\frac{G_N}{c^2}\nabla\left[
 \frac{3(\mathbf{J}\cdot\hat{\mathbf{r}})(\mathbf{S}\cdot\hat{\mathbf{r}})
@@ -680,9 +723,372 @@ f^i = -\frac{c}{2}R^i{}_{0jk}S^{jk}
 \right]
 \end{equation}
 
-\vspace{0.3cm}
+se asemeja a la fuerza entre dos dipolos magnéticos $\mathbf{m_1}$ y $\mathbf{m_2}$. $\mathbf{F}_{EM}=-\nabla U$, con $U=-\mathbf{m_1} \cdot \mathbf{B}_{EM}$
 
-\textbf{Analogía:} interacción tipo dipolo magnético
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Fuerza MPD en el formalismo de Quasi-Maxwell}
+
+Considerando una partícula que está en reposo con respecto a observadores estacionarios $u^\mu=(c,0,0,0)$ y recordando que $u_{\mu}u^{\mu}=-c^2$
+\begin{align}
+    \nonumber f^i&=\frac{c}{2}R^i{}_{0jk}\tilde{\epsilon}^{\,jk0m} S_m
+\end{align}
+y recordando que
+\begin{equation}
+	\hat{R}_{0ijk}=-\frac{1}{2c}\hat{\nabla}_k\hat{H}_{ij}+\frac{1}{2c}\hat{\nabla}_j\hat{H}_{ik}-\frac{1}{c^3}\hat{H}_{jk}\hat{G}_i
+\end{equation}
+
+entonces
+
+\begin{align}\label{Fuerza MPD FI}
+    \ve{f}&=\frac{1}{2}\tilde{\nabla}\ve{H}\cdot \ve{S}-\frac{1}{2}(\tilde{\nabla}\cdot \ve{H})\ve{S}-\frac{1}{c^2}\ve{G}(\ve{H}\cdot \ve{S})
+\end{align}
+
+La ecuación (\ref{Fuerza MPD FI}) es análoga a la ecuación de la fuerza magnética sobre un dipolo magnético $\vg{\mu}$ en el marco de una congruencia de observadores acelerados.
+\begin{equation}\label{FuerzaDipolo FI}
+	\mathbf{F}_{EM}=\tilde{\nabla}(\ve{B}_{EM}\cdot \vg{\mu})-1/2 \vg{\mu}(\tilde{\nabla}\cdot \ve{B}_{EM})-1/2(\vg{\mu}\cdot\ve{H})\ve{E}_{EM}
+\end{equation}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Fuerza MPD en el formalismo de los tensores de marea}
+
+Cuando se utiliza la condición suplementaria de Mathisson-Pirani, se tiene que $S^{\mu\nu}u_{\nu}=0$, $v^{\mu}=u^{\mu}$, y por lo tanto la ecuación de MPD se puede escribir como:
+
+\begin{align*}
+    \frac{D p_{\mu}}{d\tau}&=-\frac{1}{2c}\tilde{\epsilon}^{\,\kappa \lambda}{}_{\delta\gamma} R_{\kappa\lambda\mu\nu}u^{\nu} u^{\gamma}S^{\delta}
+\end{align*}
+
+utilizando la definición del tensor de marea gravitomagnético
+\begin{equation}\label{FuerzaTensorMarea}
+    \frac{D p_{\mu}}{d\tau}=-\mathbb{H}_{\delta\mu}S^{\delta}
+\end{equation}
+
+La ecuación de una partícula de prueba con espín en la aproximación polo-dipolo \cite{Papapetrou1951}, es la ecuación GEM análoga a la fuerza sobre un dipolo magnético en el EM $F^{\beta}_{EM}=(q/2m)\, B_{\alpha}{}^{\beta} S_C^{\alpha}$ donde $B_{\alpha}{}^{\beta}$ esel tensor de marea magnético, y $\vg{\mu}=(q/2m)\ve{S}_C$ es el momento dipolar magnético en términos del momento angular clásico $\ve{S}_C$.
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Efecto Lense-Thirring y efecto de reloj gravitomagnético}
+\begin{frame}
+\frametitle{Efecto Lense-Thirring}
+Expandiendo en serie 
+\begin{equation}\label{Aexpandida}
+    \mathbf{A}(t,\mathbf{r})=-\frac{2G_N}{c^2}\left[\frac{1}{\mathbf{r}}\int \rho(\mathbf{r'})\mathbf{u}(\mathbf{r'})d^3r'+\frac{1}{\mathbf{r}^2}\int \mathbf{r'}cos\theta'\rho(\mathbf{r'})\mathbf{u}(\mathbf{r'})d^3r'+..\right]
+\end{equation}
+
+A partir de la definición del momento angular $\mathbf{J}\equiv\int \mathbf{r \times(\rho \mathbf{v})} \,d^3r=\int (\mathbf{r \times\mathbf{j}})\, d^3r$ \cite{Ciufolini1995} se tiene que:
+\begin{align} \label{Aecu:Adipolar3}
+    \mathbf{A}_{dip}(t,\mathbf{r})=-\frac{G_N\mathbf{J}\times\hat{\mathbf{r}}}{c^2r^2}=-\frac{G_N\mathbf{J}\times\mathbf{r}}{c^2r^3}
+\end{align}
+
+utilizando $ \mathbf{B}=\nabla\times\mathbf{A}$ se encuentra el campo gravitomagnético
+
+\begin{equation}\label{Bdipolo}
+    \mathbf{B}=-\frac{G_N}{c^2}\frac{3(\mathbf{J}\cdot\hat{\mathbf{r}})\hat{\mathbf{r}}-\mathbf{J}}{r^3}
+\end{equation}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Precesión de Lense-Thirring}
+
+La fuerza gravitomagnética no es radial, por lo que induce un torque sobre la órbita. A partir de la fuerza de lorentz GEM $\mathbf{F}=m(2\mathbf{v}\times\mathbf{B})$
+
+\begin{equation*}
+\boldsymbol{\tau}=\mathbf{r}\times\mathbf{F}
+=2m(\mathbf{r}\cdot\mathbf{B})\mathbf{v}
+\end{equation*}
+
+Para el campo gravitomagnético de una fuente rotante:
+
+\begin{equation*}
+\mathbf{r}\cdot\mathbf{B}
+=-\frac{2G_N}{c^2}\frac{(\mathbf{J}\cdot\hat{\mathbf{r}})}{r^2}
+\end{equation*}
+
+Promediando sobre una órbita circular polar:
+
+\begin{equation*}
+\langle \boldsymbol{\tau} \rangle 
+= -\frac{2 m G_N J v}{c^2 r^2} \hat{\imath}
+\end{equation*}
+
+Como $\frac{d\mathbf{L}}{dt}=\boldsymbol{\tau}$, la velocidad de precesión es:
+
+\begin{equation*}
+\Omega_{LT}=\frac{|\langle \boldsymbol{\tau} \rangle|}{|\mathbf{L}|}
+=\frac{2G_N J}{c^2 r^3}
+\end{equation*}
+
+\textbf{Resultado:} precesión del plano orbital (efecto Lense–Thirring).
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Efecto Lense--Thirring para partículas con espín}
+
+\begin{columns}
+
+% -------- TEXTO --------
+\begin{column}{0.55\textwidth}
+
+El torque gravitomagnético sobre una partícula con espín es:
+
+\begin{equation*}
+\boldsymbol{\tau}_s=\mathbf{r}\times\mathbf{F}
+=m\,\mathbf{r}\times(2\mathbf{v}\times\mathbf{B})
+\end{equation*}
+
+Usando $\mathbf{S}=\mathbf{r}\times m\mathbf{v}$:
+
+\begin{equation*}
+\boldsymbol{\tau}_s=\frac{\mathbf{S}}{2}\times\mathbf{B}
+=\frac{d\mathbf{S}}{dt}
+\end{equation*}
+
+Esto describe una precesión del espín:
+
+\begin{equation*}
+\frac{d\mathbf{S}}{dt}=\boldsymbol{\Omega}\times \mathbf{S}, 
+\qquad 
+\boldsymbol{\Omega}=-\frac{\mathbf{B}}{2}
+\end{equation*}
+
+Finalmente:
+
+\begin{equation*}
+\boldsymbol{\Omega}_{LT}=
+\frac{G_N}{2c^2}
+\frac{3(\mathbf{J}\cdot\hat{\mathbf{r}})\hat{\mathbf{r}}-\mathbf{J}}{r^3}
+\end{equation*}
+
+\end{column}
+
+% -------- IMAGEN --------
+\begin{column}{0.4\textwidth}
+\centering
+\includegraphics[width=\linewidth]{graphics/precesión_espín.png}
+
+\vspace{0.2cm}
+{\scriptsize Precesión del espín inducida por el campo gravitomagnético.}
+\end{column}
+
+\end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Efecto de reloj gravitomagnético}
+
+Para órbitas ecuatoriales ($\theta=\pi/2$), con la ecuación geodésica y la métrica de Kerr se tiene que:
+
+\begin{equation}
+g_{tt,r}\left(\frac{dt}{d\phi}\right)^2
++2 g_{t\phi,r}\frac{dt}{d\phi}
++g_{\phi\phi,r}=0
+\end{equation}
+
+entonces
+
+\begin{equation}
+\frac{dt}{d\phi}=\frac{a}{c}\pm \sqrt{\frac{r^3}{G_N M}}=\frac{a}{c}\pm \omega^{-1}
+\end{equation}
+
+donde $\omega=\sqrt{\frac{G_N M}{r^3}}$. Integrando
+
+\begin{equation}
+T_{\pm}=\frac{2\pi}{\omega}\pm \frac{2\pi a}{c}
+\end{equation}
+
+restando ahora $T_+-T_-$ se tiene el efecto de reloj gravitomagnético
+
+\begin{equation}
+T_+ - T_- = \frac{4\pi a}{c}
+\end{equation}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Efecto de reloj gravitomagnético para partículas con espín (MPD)}
+
+\begin{columns}[t]
+
+%----------------- COLUMNA 1 -----------------
+\begin{column}{0.60\textwidth}
+Las ecuaciones de movimiento sobre el plano ecuatorial MPD para la métrica de Kerr, fueron desarrolladas por (\cite{Saijo1998}). Luego (\cite{Jefremov2015}) determinó los parámetros para encontrar órbitas circulares estables. Velocidad angular
+
+\begin{equation}
+\Omega_s = \Omega_0 + s\,\Omega_1
+\end{equation}
+
+\begin{equation}
+\frac{dt}{d\phi} \approx \frac{1}{\Omega_0} - s\frac{\Omega_1}{\Omega_0^2}
+\end{equation}
+
+\textbf{Tiempos orbitales}
+
+\begin{align}
+T_{\mp}=\mp 2\pi\left[\frac{a}{c}\mp \frac{1}{\sqrt{G_NM}\,u_0^{3/2}}-\,\frac{9s}{2\,c^2}\mp \frac{9a\sqrt{u_0}s}{2c\sqrt{G_NM}}\right]
+\end{align}
+
+\end{column}
+
+%----------------- COLUMNA 2 -----------------
+\begin{column}{0.35\textwidth}
+
+restando los dos tiempos se tiene el efecto de reloj GEM para partículas con espín
+
+\begin{equation}
+T_+ - T_- = \frac{4\pi a}{c} - \frac{18\pi s}{c^2}
+\end{equation}
+
+\textbf{Caso especial}
+
+\begin{itemize}
+\item Co-rotante ($s>0$) + contra-rotante ($s<0$):
+\end{itemize}
+
+\begin{equation}
+T_+ - T_- = \frac{4\pi a}{c}
+\end{equation}
+
+
+\end{column}
+
+\end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Tensores de marea para la métrica de Schwarzschild y Kerr}
+\begin{frame}[fragile]
+\frametitle{Tensor de marea gravitomagnético para Schwarzschild}
+
+\textbf{Código en Mathematica:}
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize]
+(*Calculo del tensor de marea gravitomagnetico (0,2)*)
+TensorGMDD=Simplify[PowerExpand[Table[1/(2c)*(Sum[gDD[[\[Alpha],\[Eta]]]*gDD[[\[Lambda],\[Kappa]]]*1/(Sqrt[-detg])*epsilon[[\[Gamma],\[Delta],\[Eta],\[Kappa]]]*RiemannDDDD[[\[Gamma],\[Delta],\[Beta],\[Sigma]]]*uU[[\[Lambda]]]*uU[[\[Sigma]]],{\[Eta],n},{\[Lambda],n},{\[Kappa],n},{\[Gamma],n},{\[Delta],n},{\[Sigma],n}]),{\[Alpha],n},{\[Beta],n}]]];
+\end{lstlisting}
+Para la métrica de Schwarzschild
+\begin{align}
+\mathbb{H}_{t\theta}&=\mathbb{H}_{\theta t}=-\frac{3 r_s sin \theta}{2r}u^r u^\phi \\
+\mathbb{H}_{t\phi}&=\mathbb{H}_{\phi t}=\frac{3 r_s sin \theta}{2r}u^r u^\theta \\
+\mathbb{H}_{r\theta}&=\mathbb{H}_{\theta r}=\frac{3 r_s sin \theta}{2r}u^t u^\phi \\
+\mathbb{H}_{r \phi}&=\mathbb{H}_{\phi r}=-\frac{3 r_s sin \theta}{2r}u^t u^\theta \\
+\mathbb{H}_{tt}&=\mathbb{H}_{tr}=\mathbb{H}_{rt}=\mathbb{H}_{rr}=\mathbb{H}_{\theta\theta}=\mathbb{H}_{\theta\phi}=\mathbb{H}_{\phi\theta}=\mathbb{H}_{\phi\phi}=0
+\end{align}
+
+Si se impone $u^{\phi}=u^{\theta}=0$, se encuentra que el tensor de marea GM se anulan ($\mathbb{H}_{\mu\nu}=0$)
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Tensor de marea gravitomagnético para Kerr}
+\begin{columns}
+
+%----------------- COLUMNA 1 -----------------
+\begin{column}{0.48\textwidth}
+
+\begin{align*}
+\mathbb{H}_{tt}&=-\frac{3acr_su^ru^{\theta}}{r^3}\\
+\mathbb{H}_{tr}&=-\frac{3ar_s(-cu^tu^{\theta}+au^{\theta}u^{\phi})}{2r^3}\\
+\mathbb{H}_{t\theta}&=-\frac{3r_su^r(-acu^t+a^2u^{\phi}+r^2u^{\phi})}{2r^3}\\
+\mathbb{H}_{t\phi}&=\frac{3(2a^2+r^2)r_s u^r u^{\theta}}{2r^3}\\
+\mathbb{H}_{rr}&=0
+\end{align*}
+
+\end{column}
+
+%----------------- COLUMNA 2 -----------------
+\begin{column}{0.48\textwidth}
+
+\begin{align*}
+\mathbb{H}_{r\theta}&=-\frac{3r_s(-cu^t+au^{\phi})(-acu^t+a^2u^{\phi}+r^2u^{\phi})}{2cr^3}\\
+\mathbb{H}_{r\phi}&=\frac{3(a^2+r^2)r_su^{\theta}(-cu^t+au^{\phi})}{2cr^3}\\
+\mathbb{H}_{\theta\phi}&=\frac{3ar_s u^r(-acu^t+a^2u^{\phi}+r^2u^{\phi})}{2cr^3}\\
+\mathbb{H}_{\phi\phi}&=-\frac{3a(a^2+r^2)r_s u^r u^{\theta}}{cr^3}
+\end{align*}
+
+\end{column}
+
+\end{columns}
+
+donde $r_s=2G_N M/c^2$. Imponiendo que el observador se mueva sobre el plano ecuatorial, es decir, $u^{\theta}=0$, los términos $\mathbb{H}_{tt}=\mathbb{H}_{tr}=\mathbb{H}_{rt}=\mathbb{H}_{t\phi}=\mathbb{H}_{\phi t}=\mathbb{H}_{\phi r}=\mathbb{H}_{r \phi}=\mathbb{H}_{\phi\phi}$ se anulan. Por otro lado los términos $\mathbb{H}_{t\theta}$, $\mathbb{H}_{r\theta}$ y $\mathbb{H}_{\theta\phi}$ se anulan haciendo $-acu^t+a^2u^{\phi}+r^2u^{\phi}=0$
+\begin{equation}\label{CondicionHnulaKerr}
+\omega=\frac{d\phi}{dt}=\frac{u^{\phi}}{u^{t}}=\frac{ac}{a^2+r^2}
+\end{equation}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Conclusiones}
+
+\begin{itemize}
+
+\item A lo largo del presente trabajo se presentaron de forma detallada analogías que facilitan la caracterización e interpretación del movimiento de una partícula con espín (momento angular de rotación) en un espacio-tiempo, a través de las ecuaciones de Mathisson-Papapetrou-Dixon.
+
+\item Cuando se realiza la aproximación de campo y espín débil en las ecuaciones de MPD, se encuentra que el espín es análogo al momento dipolar magnético en el electromagnetismo, y que la fuerza de interacción entre un objeto de Kerr y una partícula con espín es análoga a la fuerza entre dos dipolos magnéticos.
+
+\item Esto sugiere que existe una conexión con el gravitoelectromagnetismo desarrollado a partir de la aproximación de campo débil, en el que la métrica se describe como la métrica de Minkowski más una pequeña perturbación.
+
+\item El espín de un objeto masivo de Kerr genera un campo gravitomagnético, el cual interactúa con el espacio-tiempo a su alrededor, generando el conocido efecto de frame-dragging.
+
+\item La fuerza sobre una partícula sin espín está dada por $\mathbf{F}=m(\mathbf{E}+2\mathbf{v}\times\mathbf{B})$, mientras que para una partícula con espín es $\mathbf{F}_{GEM}=-\nabla U$, con $U=-\mathbf{S} \cdot \mathbf{B}_{GEM}$.
+
+\item Otro fenómeno estudiado es el efecto de reloj gravitomagnético, cuyo desfase para partículas sin espín es $4\pi a/c$, y al incluir espín aparece un término adicional proporcional a $18\pi s/c^2$.
+
+\end{itemize}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Trabajo futuro}
+
+\begin{itemize}
+
+\item Las definiciones de los potenciales presentan ciertos grados de libertad que pueden ser tratados al considerar que la carga gravitomagnética sea el doble de la carga gravitoeléctrica, siendo este un aspecto en el que se puede profundizar.
+
+\item Resulta pertinente profundizar en otro tipo de fuentes GEM y su interacción con partículas con espín.
+
+\item Sería interesante profundizar en el papel de las condiciones suplementarias de espín en el efecto de reloj gravitomagnético.
+
+\item También es importante analizar con mayor detalle la interpretación del término adicional asociado al espín en dicho efecto.
+
+\item Otro aspecto que merece atención es investigar el efecto de reloj cuando se consideran órbitas no circulares.
+
+\item Es importante seguir profundizando en las propiedades de simetría y de torsión del operador $\tilde{\nabla}$.
+
+\item A la luz del formalismo Quasi-Maxwell, quedan abiertos problemas relacionados con el efecto de Lense-Thirring, el efecto de reloj gravitomagnético y otras aplicaciones astrofísicas o cosmológicas.
+
+\item Aún queda por profundizar acerca de la interpretación física de las fuerzas inerciales en este formalismo.
+
+\item Es importante revisar cómo se pueden encontrar o relacionar las analogías con otras condiciones suplementarias de espín.
+
+\item Se debe trabajar en el tipo de órbitas que se mueven con velocidad angular $d\phi/dt=ac/(a^2+r^2)$ y bajo qué condiciones.
+
+\item También queda por investigar aplicaciones astrofísicas o cosmológicas de estas analogías y la conexión entre ellas.
+
+\item Resulta relevante investigar las propiedades de la estructura tipo agujero de gusano que emerge en la métrica de Kerr en el límite de masa cero, desde el punto de vista geométrico y topológico.
+
+\end{itemize}
 
 \end{frame}
 
@@ -692,9 +1098,10 @@ f^i = -\frac{c}{2}R^i{}_{0jk}S^{jk}
 \section{Referencias}
 \begin{frame}[allowframebreaks]
 \frametitle{Referencias}
+\scriptsize
 %\bibliographystyle{amsalpha} %Estilo bibliografía.
 %{\scriptsize \justifying
-%\bibliography{References}}
+%\bibliography{references}
 \printbibliography
 \end{frame}
 

@@ -1,0 +1,606 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{Bambi2018}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3039eec0737114d1e7c970700f833d13}{%
+           family={Bambi},
+           familyi={B\bibinitperiod},
+           given={Cosimo},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Singapore}%
+      }
+      \strng{namehash}{3039eec0737114d1e7c970700f833d13}
+      \strng{fullhash}{3039eec0737114d1e7c970700f833d13}
+      \strng{fullhashraw}{3039eec0737114d1e7c970700f833d13}
+      \strng{bibnamehash}{3039eec0737114d1e7c970700f833d13}
+      \strng{authorbibnamehash}{3039eec0737114d1e7c970700f833d13}
+      \strng{authornamehash}{3039eec0737114d1e7c970700f833d13}
+      \strng{authorfullhash}{3039eec0737114d1e7c970700f833d13}
+      \strng{authorfullhashraw}{3039eec0737114d1e7c970700f833d13}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-981-13-1089-8}
+      \field{title}{Introduction to General Relativity}
+      \field{year}{2018}
+      \verb{doi}
+      \verb 10.1007/978-981-13-1090-4
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/978-981-13-1090-4
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/978-981-13-1090-4
+      \endverb
+    \endentry
+    \entry{Carroll2004}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=00978ffc73cea5b0da6d988d36736374}{%
+           family={Carroll},
+           familyi={C\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=dab6ab4fdabcdc95895d5e33f8877ee4}{%
+           family={M.},
+           familyi={M\bibinitperiod},
+           given={Sean},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7cccfd0cd7448e1b5aec76ec9efb30d1}
+      \strng{fullhash}{7cccfd0cd7448e1b5aec76ec9efb30d1}
+      \strng{fullhashraw}{7cccfd0cd7448e1b5aec76ec9efb30d1}
+      \strng{bibnamehash}{7cccfd0cd7448e1b5aec76ec9efb30d1}
+      \strng{authorbibnamehash}{7cccfd0cd7448e1b5aec76ec9efb30d1}
+      \strng{authornamehash}{7cccfd0cd7448e1b5aec76ec9efb30d1}
+      \strng{authorfullhash}{7cccfd0cd7448e1b5aec76ec9efb30d1}
+      \strng{authorfullhashraw}{7cccfd0cd7448e1b5aec76ec9efb30d1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This book provides a lucid and thoroughly modern introduction to general relativity for advanced readers. It introduces modern techniques and an accessible and lively writing style to what can often be a formal and intimidating subject. Readers are led from physics of flat spacetime (special relativity), through the intricacies of differential geometry and Einstein's equations, and on to exciting applications such as black holes, gravitational radiation, and cosmology. Subtle points are illuminated throughout the text by careful and entertaining exposition. A straightforward and lucid approach, balancing mathematical rigor and physical insight, are hallmarks of this important text.}
+      \field{isbn}{0-8053-8732-3}
+      \field{issn}{0031-9228}
+      \field{issue}{1}
+      \field{journaltitle}{sgig}
+      \field{title}{Spacetime and geometry. An introduction to general relativity}
+      \field{volume}{58}
+      \field{year}{2004}
+      \field{pages}{52\bibrangedash 52}
+      \range{pages}{1}
+      \verb{urlraw}
+      \verb https://ui.adsabs.harvard.edu/abs/2004sgig.book.....C/abstract
+      \endverb
+      \verb{url}
+      \verb https://ui.adsabs.harvard.edu/abs/2004sgig.book.....C/abstract
+      \endverb
+      \keyw{General Relativity,Geometry,Spacetime}
+    \endentry
+    \entry{Costa2006}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=1c7f67467bcda2a573c629f647348d98}{%
+           family={Costa},
+           familyi={C\bibinitperiod},
+           given={L.\bibnamedelimi Filipe\bibnamedelima O.},
+           giveni={L\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1e21f05a696d5563d0e8164823cd2aa9}{%
+           family={Herdeiro},
+           familyi={H\bibinitperiod},
+           given={Carlos\bibnamedelima A.R.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0755d2fe8b3e50f106aa24e50cdaef21}
+      \strng{fullhash}{0755d2fe8b3e50f106aa24e50cdaef21}
+      \strng{fullhashraw}{0755d2fe8b3e50f106aa24e50cdaef21}
+      \strng{bibnamehash}{0755d2fe8b3e50f106aa24e50cdaef21}
+      \strng{authorbibnamehash}{0755d2fe8b3e50f106aa24e50cdaef21}
+      \strng{authornamehash}{0755d2fe8b3e50f106aa24e50cdaef21}
+      \strng{authorfullhash}{0755d2fe8b3e50f106aa24e50cdaef21}
+      \strng{authorfullhashraw}{0755d2fe8b3e50f106aa24e50cdaef21}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We propose a new approach to a physical analogy between General Relativity and Electromagnetism, based on tidal tensors of both theories. Using this approach we write a covariant form for the gravitational analogues of the Maxwell equations. The following realisations of the analogy are given. The first one matches linearised gravitational tidal tensors to exact electromagnetic tidal tensors in Minkwoski spacetime. The second one matches exact magnetic gravitational tidal tensors for ultra-stationary metrics to exact magnetic tidal tensors of electromagnetism in curved spaces. In the third we show that our approach leads to two-step exact derivation of the Papapetrou force on a gyroscope. We then establish a new proof for a class of tensor identities that define invariants of the type $\vec\{E\}^2-\vec\{B\}^2$ and $\vec\{E\}\cdot\vec\{B\}$, and we exhibit the invariants built from tidal tensors in both gravity and electromagnetism. We contrast our approach with the two gravito-electromagnetic analogies commonly found in the literature, and argue that it sheds light on the debate about the limit of validity of one of the analogies, and clarifies issues concerning the physical interpretation of the other.}
+      \field{issn}{15507998}
+      \field{issue}{2}
+      \field{journaltitle}{Physical Review D - Particles, Fields, Gravitation and Cosmology}
+      \field{month}{12}
+      \field{title}{A gravito-electromagnetic analogy based on tidal tensors}
+      \field{volume}{78}
+      \field{year}{2006}
+      \verb{doi}
+      \verb 10.1103/physrevd.78.024021
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/gr-qc/0612140v2
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/gr-qc/0612140v2
+      \endverb
+    \endentry
+    \entry{Costa2014}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=1c7f67467bcda2a573c629f647348d98}{%
+           family={Costa},
+           familyi={C\bibinitperiod},
+           given={L.\bibnamedelimi Filipe\bibnamedelima O.},
+           giveni={L\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c3e38b5f5e0e4b542155ff8888074d56}{%
+           family={Natário},
+           familyi={N\bibinitperiod},
+           given={José},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer New York LLC}%
+      }
+      \strng{namehash}{893b3b713cdedbe2fb0365817237456b}
+      \strng{fullhash}{893b3b713cdedbe2fb0365817237456b}
+      \strng{fullhashraw}{893b3b713cdedbe2fb0365817237456b}
+      \strng{bibnamehash}{893b3b713cdedbe2fb0365817237456b}
+      \strng{authorbibnamehash}{893b3b713cdedbe2fb0365817237456b}
+      \strng{authornamehash}{893b3b713cdedbe2fb0365817237456b}
+      \strng{authorfullhash}{893b3b713cdedbe2fb0365817237456b}
+      \strng{authorfullhashraw}{893b3b713cdedbe2fb0365817237456b}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We reexamine and further develop different gravito-electromagnetic (GEM) analogies found in the literature, and clarify the connection between them. Special emphasis is placed in two exact physical analogies: the analogy based on inertial fields from the so-called "1+3 formalism", and the analogy based on tidal tensors. Both are reformulated, extended and generalized. We write in both formalisms the Maxwell and the full exact Einstein field equations with sources, plus the algebraic Bianchi identities, which are cast as the source-free equations for the gravitational field. New results within each approach are unveiled. The well known analogy between linearized gravity and electromagnetism in Lorentz frames is obtained as a limiting case of the exact ones. The formal analogies between the Maxwell and Weyl tensors are also discussed, and, together with insight from the other approaches, used to physically interpret gravitational radiation. The precise conditions under which a similarity between gravity and electromagnetism occurs are discussed, and we conclude by summarizing the main outcome of each approach.}
+      \field{issue}{10}
+      \field{journaltitle}{General Relativity and Gravitation}
+      \field{month}{10}
+      \field{title}{Gravito-electromagnetic analogies}
+      \field{volume}{46}
+      \field{year}{2014}
+      \field{pages}{1\bibrangedash 57}
+      \range{pages}{57}
+      \verb{doi}
+      \verb 10.1007/s10714-014-1792-1
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1207.0465 http://dx.doi.org/10.1007/s10714-014-1792-1
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1207.0465%20http://dx.doi.org/10.1007/s10714-014-1792-1
+      \endverb
+      \keyw{1+3 Splitting,Bel decomposition,Gravitomagnetism,Gyroscope precession,Inertial forces,Quasi-Maxwell formalism,Spin-curvature force,Tidal tensors}
+    \endentry
+    \entry{Ehlers1979}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=a7679e56ee0f708ee5b35093cac378fa}{%
+           family={Ehlers},
+           familyi={E\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=ff44570aca8241914870afbc310cdb85}{%
+           family={J.},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{99b3fc9583d8a05f84b17585156413d9}
+      \strng{fullhash}{99b3fc9583d8a05f84b17585156413d9}
+      \strng{fullhashraw}{99b3fc9583d8a05f84b17585156413d9}
+      \strng{bibnamehash}{99b3fc9583d8a05f84b17585156413d9}
+      \strng{authorbibnamehash}{99b3fc9583d8a05f84b17585156413d9}
+      \strng{authornamehash}{99b3fc9583d8a05f84b17585156413d9}
+      \strng{authorfullhash}{99b3fc9583d8a05f84b17585156413d9}
+      \strng{authorfullhashraw}{99b3fc9583d8a05f84b17585156413d9}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{igsg}
+      \field{title}{Isolating gravitating systems in general relativity. Proceedings of the International School of Physics ``Enrico Fermi'', Course 67. Conference held at Varenna on Lake Como, Italy, 28 June - 10 July 1976.}
+      \field{year}{1979}
+      \verb{urlraw}
+      \verb https://ui.adsabs.harvard.edu/abs/1979igsg.conf.....E/abstract
+      \endverb
+      \verb{url}
+      \verb https://ui.adsabs.harvard.edu/abs/1979igsg.conf.....E/abstract
+      \endverb
+    \endentry
+    \entry{Gmez-Lobo2007}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=95dd956c495d78f54c9de0fd53cc5d47}{%
+           family={Gómez-Lobo},
+           familyi={G\bibinithyphendelim L\bibinitperiod},
+           given={Alfonso\bibnamedelima García-Parrado},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinithyphendelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{95dd956c495d78f54c9de0fd53cc5d47}
+      \strng{fullhash}{95dd956c495d78f54c9de0fd53cc5d47}
+      \strng{fullhashraw}{95dd956c495d78f54c9de0fd53cc5d47}
+      \strng{bibnamehash}{95dd956c495d78f54c9de0fd53cc5d47}
+      \strng{authorbibnamehash}{95dd956c495d78f54c9de0fd53cc5d47}
+      \strng{authornamehash}{95dd956c495d78f54c9de0fd53cc5d47}
+      \strng{authorfullhash}{95dd956c495d78f54c9de0fd53cc5d47}
+      \strng{authorfullhashraw}{95dd956c495d78f54c9de0fd53cc5d47}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Bel and Bel-Robinson tensors were introduced nearly fifty years ago in an attempt to generalize to gravitation the energy-momentum tensor of electromagnetism. This generalization was successful from the mathematical point of view because these tensors share mathematical properties which are remarkably similar to those of the energy-momentum tensor of electromagnetism. However, the physical role of these tensors in General Relativity has remained obscure and no interpretation has achieved wide acceptance. In principle, they cannot represent \{\em energy\} and the term \{\em superenergy\} has been coined for the hypothetical physical magnitude lying behind them. In this work we try to shed light on the true physical meaning of \{\em superenergy\} by following the same procedure which enables us to give an interpretation of the electromagnetic energy. This procedure consists in performing an orthogonal splitting of the Bel and Bel-Robinson tensors and analysing the different parts resulting from the splitting. In the electromagnetic case such splitting gives rise to the electromagnetic \{\em energy density\}, the Poynting vector and the electromagnetic stress tensor, each of them having a precise physical interpretation which is deduced from the \{\em dynamical laws\} of electromagnetism (Poynting theorem). The full orthogonal splitting of the Bel and Bel-Robinson tensors is more complex but, as expected, similarities with electromagnetism are present. Also the covariant divergence of the Bel tensor is analogous to the covariant divergence of the electromagnetic energy-momentum tensor and the orthogonal splitting of the former is found. The ensuing \{\em equations\} are to the superenergy what the Poynting theorem is to electromagnetism. See paper for full abstract.}
+      \field{issue}{1}
+      \field{journaltitle}{Classical and Quantum Gravity}
+      \field{month}{11}
+      \field{title}{Dynamical laws of superenergy in General Relativity}
+      \field{volume}{25}
+      \field{year}{2007}
+      \verb{doi}
+      \verb 10.1088/0264-9381/25/1/015006
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/0707.1475 http://dx.doi.org/10.1088/0264-9381/25/1/015006
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/0707.1475%20http://dx.doi.org/10.1088/0264-9381/25/1/015006
+      \endverb
+    \endentry
+    \entry{Hobson2015}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=f81ebfc218ed573f729122c9112ee997}{%
+           family={Hobson},
+           familyi={H\bibinitperiod},
+           given={M\bibnamedelima P.},
+           giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bedc1e5ca01b4bcbd05e1e7ef31c0532}{%
+           family={Efstathiou},
+           familyi={E\bibinitperiod},
+           given={G\bibnamedelima P..},
+           giveni={G\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7b0880553e1507c6b2b906c7cbe57b8b}{%
+           family={Lasenby},
+           familyi={L\bibinitperiod},
+           given={A\bibnamedelima N.},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{2840cbdc6fedd6a2cc4b8294993f82df}
+      \strng{fullhash}{2840cbdc6fedd6a2cc4b8294993f82df}
+      \strng{fullhashraw}{2840cbdc6fedd6a2cc4b8294993f82df}
+      \strng{bibnamehash}{2840cbdc6fedd6a2cc4b8294993f82df}
+      \strng{authorbibnamehash}{2840cbdc6fedd6a2cc4b8294993f82df}
+      \strng{authornamehash}{2840cbdc6fedd6a2cc4b8294993f82df}
+      \strng{authorfullhash}{2840cbdc6fedd6a2cc4b8294993f82df}
+      \strng{authorfullhashraw}{2840cbdc6fedd6a2cc4b8294993f82df}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0521829518}
+      \field{title}{General Relativity : An Introduction for Physicists}
+      \field{year}{2015}
+      \verb{urlraw}
+      \verb https://books.google.com/books/about/General_Relativity.html?hl=es&id=5dryXCWR7EIC
+      \endverb
+      \verb{url}
+      \verb https://books.google.com/books/about/General_Relativity.html?hl=es&id=5dryXCWR7EIC
+      \endverb
+    \endentry
+    \entry{Mashhoon1999}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=1bb54ad3ed4017ab504153dff8e7725c}{%
+           family={Mashhoon},
+           familyi={M\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7f413004b8d6cc864b2685e1c8dd0d5f}{%
+           family={Gronwald},
+           familyi={G\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=44a53cb6a50b547b615c11c1fca0a628}{%
+           family={Lichtenegger},
+           familyi={L\bibinitperiod},
+           given={H.\bibnamedelimi I.\bibnamedelimi M.},
+           giveni={H\bibinitperiod\bibinitdelim I\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{8b88f2a1dafd4b79f365d4b43343c159}
+      \strng{fullhash}{8b88f2a1dafd4b79f365d4b43343c159}
+      \strng{fullhashraw}{8b88f2a1dafd4b79f365d4b43343c159}
+      \strng{bibnamehash}{8b88f2a1dafd4b79f365d4b43343c159}
+      \strng{authorbibnamehash}{8b88f2a1dafd4b79f365d4b43343c159}
+      \strng{authornamehash}{8b88f2a1dafd4b79f365d4b43343c159}
+      \strng{authorfullhash}{8b88f2a1dafd4b79f365d4b43343c159}
+      \strng{authorfullhashraw}{8b88f2a1dafd4b79f365d4b43343c159}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The main theoretical aspects of gravitomagnetism are reviewed. It is shown that the gravitomagnetic precession of a gyroscope is intimately connected with the special temporal structure around a rotating mass that is revealed by the gravitomagnetic clock effect. This remarkable effect, which involves the difference in the proper periods of a standard clock in prograde and retrograde circular geodesic orbits around a rotating mass, is discussed in detail. The implications of this effect for the notion of ``inertial dragging'' in the general theory of relativity are presented. The theory of the clock effect is developed within the PPN framework and the possibility of measuring it via spaceborne clocks is examined.}
+      \field{journaltitle}{Gyros, Clocks, Interferometers...: Testing Relativistic Graviy in Space}
+      \field{month}{12}
+      \field{title}{Gravitomagnetism and the Clock Effect}
+      \field{year}{1999}
+      \field{pages}{83\bibrangedash 108}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1007/3-540-40988-2_5
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/gr-qc/9912027 http://dx.doi.org/10.1007/3-540-40988-2_5
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/gr-qc/9912027%20http://dx.doi.org/10.1007/3-540-40988-2_5
+      \endverb
+    \endentry
+    \entry{Misner1973}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=05c5e0e62bd36ef32b9a719149851fdc}{%
+           family={Misner},
+           familyi={M\bibinitperiod},
+           given={Charles\bibnamedelima W.},
+           giveni={C\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=09e928bef0c66042b777c23f5eb91c00}{%
+           family={Thorne},
+           familyi={T\bibinitperiod},
+           given={Kip\bibnamedelima S.},
+           giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=656f2ece652560737fefbeef9b753049}{%
+           family={Wheeler},
+           familyi={W\bibinitperiod},
+           given={John\bibnamedelima Archibald},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press}%
+      }
+      \strng{namehash}{2d375dc68cdd744e95aa1d2fbe386ef4}
+      \strng{fullhash}{2d375dc68cdd744e95aa1d2fbe386ef4}
+      \strng{fullhashraw}{2d375dc68cdd744e95aa1d2fbe386ef4}
+      \strng{bibnamehash}{2d375dc68cdd744e95aa1d2fbe386ef4}
+      \strng{authorbibnamehash}{2d375dc68cdd744e95aa1d2fbe386ef4}
+      \strng{authornamehash}{2d375dc68cdd744e95aa1d2fbe386ef4}
+      \strng{authorfullhash}{2d375dc68cdd744e95aa1d2fbe386ef4}
+      \strng{authorfullhashraw}{2d375dc68cdd744e95aa1d2fbe386ef4}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{First published in 1973, Gravitation is a landmark graduate-level textbook that presents Einstein’s general theory of relativity and offers a rigorous, full-year course on the physics of gravitation. Upon publication, Science called it “a pedagogic masterpiece,” and it has since become a classic, considered essential reading for every serious student and researcher in the field of relativity. This authoritative text has shaped the research of generations of physicists and astronomers, and the book continues to influence the way experts think about the subject. With an emphasis on geometric interpretation, this masterful and comprehensive book introduces the theory of relativity; describes physical applications, from stars to black holes and gravitational waves; and portrays the field’s frontiers. The book also offers a unique, alternating, two-track pathway through the subject. Material focusing on basic physical ideas is designated as Track 1 and formulates an appropriate one-semester graduate-level course. The remaining Track 2 material provides a wealth of advanced topics instructors can draw on for a two-semester course, with Track 1 sections serving as prerequisites. This must-have reference for students and scholars of relativity includes a new preface by David Kaiser, reflecting on the history of the book’s publication and reception, and a new introduction by Charles Misner and Kip Thorne, discussing exciting developments in the field since the book’s original publication. The book teaches students to: Grasp the laws of physics in flat and curved spacetime. Predict orders of magnitude. Calculate using the principal tools of modern geometry. Understand Einstein’s geometric framework for physics. Explore applications, including neutron stars, Schwarzschild and Kerr black holes, gravitational collapse, gravitational waves, cosmology, and so much more.}
+      \field{isbn}{9781400889099}
+      \field{issn}{0282-7913}
+      \field{journaltitle}{Gravitation}
+      \field{month}{1}
+      \field{title}{GRAVITATION}
+      \field{year}{1973}
+      \field{pages}{1\bibrangedash 1280}
+      \range{pages}{1280}
+      \verb{doi}
+      \verb 10.54797/tfl.v51i1-2.1729
+      \endverb
+    \endentry
+    \entry{Natario2007}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=00fa17c171fae3d9e84316a1ed9ce787}{%
+           family={Natario},
+           familyi={N\bibinitperiod},
+           given={Jose},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{00fa17c171fae3d9e84316a1ed9ce787}
+      \strng{fullhash}{00fa17c171fae3d9e84316a1ed9ce787}
+      \strng{fullhashraw}{00fa17c171fae3d9e84316a1ed9ce787}
+      \strng{bibnamehash}{00fa17c171fae3d9e84316a1ed9ce787}
+      \strng{authorbibnamehash}{00fa17c171fae3d9e84316a1ed9ce787}
+      \strng{authornamehash}{00fa17c171fae3d9e84316a1ed9ce787}
+      \strng{authorfullhash}{00fa17c171fae3d9e84316a1ed9ce787}
+      \strng{authorfullhashraw}{00fa17c171fae3d9e84316a1ed9ce787}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We write the Mathisson-Papapetrou equations of motion for a spinning particle in a stationary spacetime using the quasi-Maxwell formalism and give an interpretation of the coupling between spin and curvature. The formalism is then used to compute equilibrium positions for spinning particles in the NUT spacetime.}
+      \field{issue}{9}
+      \field{journaltitle}{General Relativity and Gravitation}
+      \field{month}{1}
+      \field{title}{Quasi-Maxwell interpretation of the spin-curvature coupling}
+      \field{volume}{39}
+      \field{year}{2007}
+      \field{pages}{1477\bibrangedash 1487}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1007/s10714-007-0474-7
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/gr-qc/0701067 http://dx.doi.org/10.1007/s10714-007-0474-7
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/gr-qc/0701067%20http://dx.doi.org/10.1007/s10714-007-0474-7
+      \endverb
+    \endentry
+    \entry{MunizOliva2002}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=70e0552c66307e55113af68e73dbd6d3}{%
+           family={Oliva},
+           familyi={O\bibinitperiod},
+           given={Waldyr\bibnamedelima Muniz},
+           giveni={W\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{70e0552c66307e55113af68e73dbd6d3}
+      \strng{fullhash}{70e0552c66307e55113af68e73dbd6d3}
+      \strng{fullhashraw}{70e0552c66307e55113af68e73dbd6d3}
+      \strng{bibnamehash}{70e0552c66307e55113af68e73dbd6d3}
+      \strng{authorbibnamehash}{70e0552c66307e55113af68e73dbd6d3}
+      \strng{authornamehash}{70e0552c66307e55113af68e73dbd6d3}
+      \strng{authorfullhash}{70e0552c66307e55113af68e73dbd6d3}
+      \strng{authorfullhashraw}{70e0552c66307e55113af68e73dbd6d3}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-540-44242-4}
+      \field{title}{Geometric Mechanics}
+      \field{volume}{1798}
+      \field{year}{2002}
+      \verb{doi}
+      \verb 10.1007/B84214
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/b84214
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/b84214
+      \endverb
+    \endentry
+    \entry{SJ2020}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=58effc7ee6ca0654c01d846961a5eeb6}{%
+           family={S.J.},
+           familyi={S\bibinitperiod},
+           given={Nelson\bibnamedelimb Alonso\bibnamedelimb Velandia\bibnamedelima Heredia},
+           giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Editorial Pontificia Universidad Javeriana}%
+      }
+      \strng{namehash}{58effc7ee6ca0654c01d846961a5eeb6}
+      \strng{fullhash}{58effc7ee6ca0654c01d846961a5eeb6}
+      \strng{fullhashraw}{58effc7ee6ca0654c01d846961a5eeb6}
+      \strng{bibnamehash}{58effc7ee6ca0654c01d846961a5eeb6}
+      \strng{authorbibnamehash}{58effc7ee6ca0654c01d846961a5eeb6}
+      \strng{authornamehash}{58effc7ee6ca0654c01d846961a5eeb6}
+      \strng{authorfullhash}{58effc7ee6ca0654c01d846961a5eeb6}
+      \strng{authorfullhashraw}{58effc7ee6ca0654c01d846961a5eeb6}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9789587814491}
+      \field{journaltitle}{olution of Mathisson-Papapetrou-Dixon Equations for Spinning Test Particles in a Kerr Metric}
+      \field{month}{3}
+      \field{title}{Solution of Mathisson-Papapetrou-Dixon Equations for Spinning Test Particles in a Kerr Metric}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.11144/JAVERIANA.9789587814897
+      \endverb
+      \verb{urlraw}
+      \verb https://perfilesycapacidades.javeriana.edu.co/es/publications/solution-of-mathisson-papapetrou-dixon-equations-for-spinning-tes
+      \endverb
+      \verb{url}
+      \verb https://perfilesycapacidades.javeriana.edu.co/es/publications/solution-of-mathisson-papapetrou-dixon-equations-for-spinning-tes
+      \endverb
+    \endentry
+    \entry{Wald1972}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d928a84f3ddabba167427ba381e2c034}{%
+           family={Wald},
+           familyi={W\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{d928a84f3ddabba167427ba381e2c034}
+      \strng{fullhash}{d928a84f3ddabba167427ba381e2c034}
+      \strng{fullhashraw}{d928a84f3ddabba167427ba381e2c034}
+      \strng{bibnamehash}{d928a84f3ddabba167427ba381e2c034}
+      \strng{authorbibnamehash}{d928a84f3ddabba167427ba381e2c034}
+      \strng{authornamehash}{d928a84f3ddabba167427ba381e2c034}
+      \strng{authorfullhash}{d928a84f3ddabba167427ba381e2c034}
+      \strng{authorfullhashraw}{d928a84f3ddabba167427ba381e2c034}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The gravitational spin interaction is investigated by studying the deviation from geodesic motion of spinning test bodies. The force on a spinning test body at rest in the exterior field of an arbitrary stationary, rotating source is evaluated and found to be given by F= - SJ+3 (rJ) (rS)r3+O(1r5) where S is the spin of the test body, J is the angular momentum of the source of the gravitational field, and geometrized units G=c=1 are used. Thus, the gravitational spin-spin force has the same form as the force between two dipoles in electromagnetism except that its sign is opposite, i.e., "north pole" attracts "north pole" in gravitational spin-spin interaction. The gravitational spin-spin torque, previously investigated by Schiff, Mashhoon, and Wilkins, also has opposite sign to the corresponding electromagnetic dipole-dipole torque. The sign of the spin-spin force agrees with that predicted by Hawking on the basis of the fact that less energy can be extracted from colliding black holes if their spins are parallel rather than antiparallel. Furthermore, it is shown that the spin-interaction energy quantitatively accounts for the angular momentum dependence in Hawking's formula for the upper limit for energy released from colliding black holes. The gravitational spin-orbit force is also investigated, and it is found to differ in form from the corresponding electromagnetic spin-orbit force. © 1972 The American Physical Society.}
+      \field{issn}{05562821}
+      \field{issue}{2}
+      \field{journaltitle}{Physical Review D}
+      \field{month}{7}
+      \field{title}{Gravitational Spin Interaction}
+      \field{volume}{6}
+      \field{year}{1972}
+      \field{pages}{406}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevD.6.406
+      \endverb
+      \verb{urlraw}
+      \verb https://journals.aps.org/prd/abstract/10.1103/PhysRevD.6.406
+      \endverb
+      \verb{url}
+      \verb https://journals.aps.org/prd/abstract/10.1103/PhysRevD.6.406
+      \endverb
+    \endentry
+  \enddatalist
+  \missing{Gerakopoulos2014}
+  \missing{Kerr1963}
+  \missing{Knickmann2015}
+\endrefsection
+\endinput
+

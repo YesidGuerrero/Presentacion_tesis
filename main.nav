@@ -7,68 +7,84 @@
 \headcommand {\sectionentry {1}{Introducción}{3}{Introducción}{0}}
 \headcommand {\slideentry {1}{0}{1}{3/3}{}{0}}
 \headcommand {\beamer@framepages {3}{3}}
-\headcommand {\beamer@sectionpages {3}{3}}
-\headcommand {\beamer@subsectionpages {3}{3}}
-\headcommand {\sectionentry {2}{Fundamentos}{4}{Fundamentos}{0}}
-\headcommand {\slideentry {2}{0}{1}{4/4}{}{0}}
+\headcommand {\slideentry {1}{0}{2}{4/4}{}{0}}
 \headcommand {\beamer@framepages {4}{4}}
-\headcommand {\beamer@sectionpages {4}{4}}
-\headcommand {\beamer@subsectionpages {4}{4}}
-\headcommand {\sectionentry {3}{Gravitoelectromagnetismo}{5}{Gravitoelectromagnetismo}{0}}
-\headcommand {\beamer@subsectionpages {5}{4}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{5}{Basado en la teoría linealizada}}
-\headcommand {\slideentry {3}{1}{1}{5/5}{Basado en la teoría linealizada}{0}}
+\headcommand {\slideentry {1}{0}{3}{5/5}{}{0}}
 \headcommand {\beamer@framepages {5}{5}}
-\headcommand {\beamer@subsectionpages {5}{5}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{6}{Basado en las fuerzas inerciales}}
-\headcommand {\slideentry {3}{2}{1}{6/6}{Basado en las fuerzas inerciales}{0}}
+\headcommand {\slideentry {1}{0}{4}{6/6}{}{0}}
 \headcommand {\beamer@framepages {6}{6}}
-\headcommand {\beamer@subsectionpages {6}{6}}
-\headcommand {\beamer@subsectionentry {0}{3}{3}{7}{Basado en los tensores de marea}}
-\headcommand {\slideentry {3}{3}{1}{7/7}{Basado en los tensores de marea}{0}}
+\headcommand {\beamer@sectionpages {3}{6}}
+\headcommand {\beamer@subsectionpages {3}{6}}
+\headcommand {\sectionentry {2}{Fundamentos}{7}{Fundamentos}{0}}
+\headcommand {\slideentry {2}{0}{1}{7/7}{}{0}}
 \headcommand {\beamer@framepages {7}{7}}
-\headcommand {\slideentry {3}{3}{2}{8/8}{Basado en los tensores de marea}{0}}
+\headcommand {\beamer@sectionpages {7}{7}}
+\headcommand {\beamer@subsectionpages {7}{7}}
+\headcommand {\sectionentry {3}{Gravitoelectromagnetismo}{8}{Gravitoelectromagnetismo}{0}}
+\headcommand {\beamer@subsectionpages {8}{7}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{8}{Basado en la teoría linealizada}}
+\headcommand {\slideentry {3}{1}{1}{8/8}{Basado en la teoría linealizada}{0}}
 \headcommand {\beamer@framepages {8}{8}}
-\headcommand {\slideentry {3}{3}{3}{9/9}{Basado en los tensores de marea}{0}}
+\headcommand {\slideentry {3}{1}{2}{9/9}{Basado en la teoría linealizada}{0}}
 \headcommand {\beamer@framepages {9}{9}}
-\headcommand {\beamer@subsectionpages {7}{9}}
-\headcommand {\beamer@subsectionentry {0}{3}{4}{10}{Enumeración, listas y descripciones}}
-\headcommand {\slideentry {3}{4}{1}{10/10}{Enumeración, listas y descripciones}{0}}
+\headcommand {\slideentry {3}{1}{3}{10/10}{Basado en la teoría linealizada}{0}}
 \headcommand {\beamer@framepages {10}{10}}
-\headcommand {\slideentry {3}{4}{2}{11/12}{Enumeración, listas y descripciones}{0}}
-\headcommand {\beamer@framepages {11}{12}}
-\headcommand {\beamer@subsectionpages {10}{12}}
-\headcommand {\beamer@subsectionentry {0}{3}{5}{13}{Citas bibliográficas}}
-\headcommand {\slideentry {3}{5}{1}{13/13}{Citas bibliográficas}{0}}
+\headcommand {\beamer@subsectionpages {8}{10}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{11}{Basado en fuerzas inerciales}}
+\headcommand {\slideentry {3}{2}{1}{11/11}{Basado en fuerzas inerciales}{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\slideentry {3}{2}{2}{12/12}{Basado en fuerzas inerciales}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\slideentry {3}{2}{3}{13/13}{Basado en fuerzas inerciales}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\beamer@sectionpages {5}{13}}
-\headcommand {\beamer@subsectionpages {13}{13}}
-\headcommand {\sectionentry {4}{Comandos adicionales}{14}{Comandos adicionales}{0}}
-\headcommand {\slideentry {4}{0}{1}{14/14}{}{0}}
+\headcommand {\slideentry {3}{2}{4}{14/14}{Basado en fuerzas inerciales}{0}}
 \headcommand {\beamer@framepages {14}{14}}
-\headcommand {\slideentry {4}{0}{2}{15/15}{}{0}}
+\headcommand {\slideentry {3}{2}{5}{15/15}{Basado en fuerzas inerciales}{0}}
 \headcommand {\beamer@framepages {15}{15}}
-\headcommand {\beamer@subsectionpages {14}{15}}
-\headcommand {\beamer@subsectionentry {0}{4}{1}{16}{Diapositivas especiales}}
-\headcommand {\slideentry {4}{1}{1}{16/16}{Diapositivas especiales}{0}}
+\headcommand {\beamer@subsectionpages {11}{15}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{16}{Basado en tensores de marea}}
+\headcommand {\slideentry {3}{3}{1}{16/16}{Basado en tensores de marea}{0}}
 \headcommand {\beamer@framepages {16}{16}}
-\headcommand {\slideentry {4}{1}{2}{17/17}{Diapositivas especiales}{0}}
+\headcommand {\slideentry {3}{3}{2}{17/17}{Basado en tensores de marea}{0}}
 \headcommand {\beamer@framepages {17}{17}}
-\headcommand {\slideentry {4}{1}{3}{18/18}{Diapositivas especiales}{0}}
+\headcommand {\slideentry {3}{3}{3}{18/18}{Basado en tensores de marea}{0}}
 \headcommand {\beamer@framepages {18}{18}}
-\headcommand {\slideentry {4}{1}{4}{19/19}{Diapositivas especiales}{0}}
+\headcommand {\slideentry {3}{3}{4}{19/19}{Basado en tensores de marea}{0}}
 \headcommand {\beamer@framepages {19}{19}}
-\headcommand {\slideentry {4}{1}{5}{20/20}{Diapositivas especiales}{0}}
+\headcommand {\beamer@sectionpages {8}{19}}
+\headcommand {\beamer@subsectionpages {16}{19}}
+\headcommand {\sectionentry {4}{Ecuaciones MPD y GEM}{20}{Ecuaciones MPD y GEM}{0}}
+\headcommand {\slideentry {4}{0}{1}{20/20}{}{0}}
 \headcommand {\beamer@framepages {20}{20}}
-\headcommand {\slideentry {4}{1}{6}{21/21}{Diapositivas especiales}{0}}
+\headcommand {\slideentry {4}{0}{2}{21/21}{}{0}}
 \headcommand {\beamer@framepages {21}{21}}
-\headcommand {\beamer@sectionpages {14}{21}}
-\headcommand {\beamer@subsectionpages {16}{21}}
-\headcommand {\sectionentry {5}{Referencias}{22}{Referencias}{0}}
-\headcommand {\slideentry {5}{0}{1}{22/22}{}{0}}
+\headcommand {\slideentry {4}{0}{3}{22/22}{}{0}}
 \headcommand {\beamer@framepages {22}{22}}
-\headcommand {\beamer@partpages {1}{22}}
-\headcommand {\beamer@subsectionpages {22}{22}}
-\headcommand {\beamer@sectionpages {22}{22}}
-\headcommand {\beamer@documentpages {22}}
-\headcommand {\gdef \inserttotalframenumber {21}}
+\headcommand {\beamer@sectionpages {20}{22}}
+\headcommand {\beamer@subsectionpages {20}{22}}
+\headcommand {\sectionentry {5}{Efecto Lense-Thirring y efecto de reloj gravitomagnético}{23}{Efecto Lense-Thirring y efecto de reloj gravitomagnético}{0}}
+\headcommand {\slideentry {5}{0}{1}{23/23}{}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\slideentry {5}{0}{2}{24/24}{}{0}}
+\headcommand {\beamer@framepages {24}{24}}
+\headcommand {\slideentry {5}{0}{3}{25/25}{}{0}}
+\headcommand {\beamer@framepages {25}{25}}
+\headcommand {\beamer@sectionpages {23}{25}}
+\headcommand {\beamer@subsectionpages {23}{25}}
+\headcommand {\sectionentry {6}{Referencias}{26}{Referencias}{0}}
+\headcommand {\beamer@sectionpages {26}{25}}
+\headcommand {\beamer@subsectionpages {26}{25}}
+\headcommand {\sectionentry {7}{Referencias}{26}{Referencias}{0}}
+\headcommand {\slideentry {7}{0}{0}{26/26}{}{0}}
+\headcommand {\beamer@framepages {26}{26}}
+\headcommand {\slideentry {7}{0}{0}{26/27}{}{0}}
+\headcommand {\beamer@framepages {26}{27}}
+\headcommand {\slideentry {7}{0}{0}{26/28}{}{0}}
+\headcommand {\beamer@framepages {26}{28}}
+\headcommand {\slideentry {7}{0}{0}{26/29}{}{0}}
+\headcommand {\beamer@framepages {26}{29}}
+\headcommand {\beamer@partpages {1}{29}}
+\headcommand {\beamer@subsectionpages {26}{29}}
+\headcommand {\beamer@sectionpages {26}{29}}
+\headcommand {\beamer@documentpages {29}}
+\headcommand {\gdef \inserttotalframenumber {29}}
